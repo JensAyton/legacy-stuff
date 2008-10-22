@@ -1,0 +1,84 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf350
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww12060\viewh13540\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\b\fs28 \cf0 SCSliderWithTextField
+\b0\fs24 \
+\'a9 2007 Jens Ayton <{\field{\*\fldinst{HYPERLINK "mailto:Jens%20Ayton%20%3Cjens@ayton.se%3E"}}{\fldrslt jens@ayton.se}}>\
+\
+
+\b Bad Idea\
+
+\b0 I don\'92t recommend using this code! It makes unwarranted assumptions about how its superclass is implemented, resulting in a design that\'92s elegant in a will-hurt-you-badly-five-years-down-the-line kind of way.\
+\
+
+\b Overview
+\b0 \
+
+\f1 SCSliderWithTextField
+\f0  is a subclass of 
+\f1 NSSlider
+\f0  which, when being updated, shows its value in an 
+\f1 NSTextField
+\f0  which is only visible during the update. This behaviour is inspired by the sleep time sliders in the Energy Saver control panel.\
+\
+Unlike the sliders in the Energy Saver control panel, SCSliderWithTextField will show its text fields temporarily if the value is changed through user interaction other than dragging, for instance full keyboard navigation. By default, an interval of 2.0 seconds is used; this can be overridden by setting the macro 
+\f1 kSCSliderWithTextFieldShowInterval
+\f0 .\
+\
+Usage is essentially the same as a normal 
+\f1 NSSlider
+\f0 , except that there is an outlet (
+\f1 liveValueTextField
+\f0 ) to specify the text field used to display the value during update. Additionally, a delegate may be set to format the string displayed in the live value text field; alternatively, a formatter on the text field may be used.\
+\
+
+\b Sample project
+\b0 \
+A sample project is included. It consists of an application with two functionally identical 
+\f1 SCSliderWithTextField
+\f0 s. Each of them updates a text field when their value is changed, in addition to the live value field. The top one is set up entirely within InterfaceBuilder, and uses an 
+\f1 NSNumberFormatter
+\f0  for both of its text fields. The bottom one is set up programmatically by a 
+\f1 TestController
+\f0  object, and uses the delegate method to format its live value text field; the 
+\f1 TestController
+\f0  handles setting the result value field.\
+\
+
+\b Hacking
+\b0 \
+The code may be somewhat confusing, as it sets up a second target/action pair. Essentially, the \'93real\'94 target/action are used for the 
+\f1 NSSlider
+\f0  code to tell the 
+\f1 SCSliderWithTextField
+\f0  code about updates, while the secondary \'93outward\'94 target/action pair is used by the 
+\f1 SCSliderWithTextField
+\f0  code to communicate with client code. Similarly, a separate \'93outward\'94 value of the 
+\f1 isContinuous
+\f0  property is maintained. This helps make 
+\f1 SCSliderWithTextField
+\f0  self-contained; client code can ignore these issues.\
+\
+
+\b Limitations
+\b0 \
+Since 
+\f1 SCSliderWithTextField
+\f0  is implemented at the control level, not the cell level, it can\'92t easily be used in tables and similar.\
+\
+Requires Mac OS X 10.3 or later.\
+\
+
+\b License
+\b0 \
+\'a9 2007 Jens Ayton\
+\
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \'93Software\'94), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\
+\
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\
+\
+THE SOFTWARE IS PROVIDED \'93AS IS\'94, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\
+}

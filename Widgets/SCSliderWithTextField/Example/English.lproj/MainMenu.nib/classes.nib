@@ -1,0 +1,23 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            CLASS = SCSliderWithTextField; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {delegate = id; liveValueTextField = NSTextField; outwardsTarget = id; }; 
+            SUPERCLASS = NSSlider; 
+        }, 
+        {
+            CLASS = TestController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                liveValueField = NSTextField; 
+                placeholderView = NSView; 
+                resultField = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
