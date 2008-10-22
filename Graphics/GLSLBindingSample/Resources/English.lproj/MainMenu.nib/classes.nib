@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {takeColorFrom = id; takeShininessFrom = id; }; 
+            CLASS = ExampleController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                colorWell = NSColorWell; 
+                glView = ExampleOpenGLView; 
+                shininessSlider = NSSlider; 
+                window = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = ExampleOpenGLView; LANGUAGE = ObjC; SUPERCLASS = NSOpenGLView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A2F65780C5CF93F003872C8 /* ExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F65770C5CF93F003872C8 /* ExampleController.m */; };
+		1A2F65890C5CFAA6003872C8 /* ExampleOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F65880C5CFAA6003872C8 /* ExampleOpenGLView.m */; };
+		1A2F65920C5CFB37003872C8 /* ExampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F65910C5CFB37003872C8 /* ExampleModel.m */; };
+		1A2F66500C5D4B70003872C8 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A2F664F0C5D4B70003872C8 /* OpenGL.framework */; };
+		1A2F66C20C5D4E30003872C8 /* ExampleShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 1A2F66C10C5D4E30003872C8 /* ExampleShader.frag */; };
+		1A2F66E70C5D4FB0003872C8 /* JAShaderMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F66DF0C5D4FB0003872C8 /* JAShaderMaterial.m */; };
+		1A2F66E80C5D4FB0003872C8 /* JAShaderUniformBindingTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F66E00C5D4FB0003872C8 /* JAShaderUniformBindingTypes.m */; };
+		1A2F66E90C5D4FB0003872C8 /* JAShaderUniform.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F66E10C5D4FB0003872C8 /* JAShaderUniform.m */; };
+		1A2F66EA0C5D4FB0003872C8 /* JAShaderProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F66E50C5D4FB0003872C8 /* JAShaderProgram.m */; };
+		1AC62F7D0C5E39D500592105 /* ExampleShader.vert in Resources */ = {isa = PBXBuildFile; fileRef = 1AC62F7C0C5E39D500592105 /* ExampleShader.vert */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1A2F65760C5CF93F003872C8 /* ExampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleController.h; sourceTree = "<group>"; };
+		1A2F65770C5CF93F003872C8 /* ExampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleController.m; sourceTree = "<group>"; };
+		1A2F65870C5CFAA6003872C8 /* ExampleOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleOpenGLView.h; sourceTree = "<group>"; };
+		1A2F65880C5CFAA6003872C8 /* ExampleOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleOpenGLView.m; sourceTree = "<group>"; };
+		1A2F65900C5CFB37003872C8 /* ExampleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleModel.h; sourceTree = "<group>"; };
+		1A2F65910C5CFB37003872C8 /* ExampleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleModel.m; sourceTree = "<group>"; };
+		1A2F664F0C5D4B70003872C8 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		1A2F66C10C5D4E30003872C8 /* ExampleShader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ExampleShader.frag; sourceTree = "<group>"; };
+		1A2F66DF0C5D4FB0003872C8 /* JAShaderMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAShaderMaterial.m; sourceTree = "<group>"; };
+		1A2F66E00C5D4FB0003872C8 /* JAShaderUniformBindingTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAShaderUniformBindingTypes.m; sourceTree = "<group>"; };
+		1A2F66E10C5D4FB0003872C8 /* JAShaderUniform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAShaderUniform.m; sourceTree = "<group>"; };
+		1A2F66E20C5D4FB0003872C8 /* JAShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAShaderProgram.h; sourceTree = "<group>"; };
+		1A2F66E30C5D4FB0003872C8 /* JAShaderUniform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAShaderUniform.h; sourceTree = "<group>"; };
+		1A2F66E40C5D4FB0003872C8 /* JAShaderUniformBindingTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAShaderUniformBindingTypes.h; sourceTree = "<group>"; };
+		1A2F66E50C5D4FB0003872C8 /* JAShaderProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAShaderProgram.m; sourceTree = "<group>"; };
+		1A2F66E60C5D4FB0003872C8 /* JAShaderMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAShaderMaterial.h; sourceTree = "<group>"; };
+		1AC62F7C0C5E39D500592105 /* ExampleShader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ExampleShader.vert; sourceTree = "<group>"; };
+		1AC631D40C5EA04200592105 /* JAVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAVector.h; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* GLSLBindingSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLSLBindingSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				1A2F66500C5D4B70003872C8 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1A2F65760C5CF93F003872C8 /* ExampleController.h */,
+				1A2F65770C5CF93F003872C8 /* ExampleController.m */,
+				1A2F65870C5CFAA6003872C8 /* ExampleOpenGLView.h */,
+				1A2F65880C5CFAA6003872C8 /* ExampleOpenGLView.m */,
+				1A2F65900C5CFB37003872C8 /* ExampleModel.h */,
+				1A2F65910C5CFB37003872C8 /* ExampleModel.m */,
+				1AC631D40C5EA04200592105 /* JAVector.h */,
+				1A2F66E60C5D4FB0003872C8 /* JAShaderMaterial.h */,
+				1A2F66DF0C5D4FB0003872C8 /* JAShaderMaterial.m */,
+				1A2F66E20C5D4FB0003872C8 /* JAShaderProgram.h */,
+				1A2F66E50C5D4FB0003872C8 /* JAShaderProgram.m */,
+				1A2F66E30C5D4FB0003872C8 /* JAShaderUniform.h */,
+				1A2F66E10C5D4FB0003872C8 /* JAShaderUniform.m */,
+				1A2F66E40C5D4FB0003872C8 /* JAShaderUniformBindingTypes.h */,
+				1A2F66E00C5D4FB0003872C8 /* JAShaderUniformBindingTypes.m */,
+			);
+			name = Classes;
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A2F664F0C5D4B70003872C8 /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* GLSLBindingSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* GLSLBindingSample */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = GLSLBindingSample;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			path = Source;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1AC62F7C0C5E39D500592105 /* ExampleShader.vert */,
+				1A2F66C10C5D4E30003872C8 /* ExampleShader.frag */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* GLSLBindingSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "GLSLBindingSample" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLSLBindingSample;
+			productInstallPath = "$(HOME)/Applications";
+			productName = GLSLBindingSample;
+			productReference = 8D1107320486CEB800E47090 /* GLSLBindingSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GLSLBindingSample" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* GLSLBindingSample */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* GLSLBindingSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AC62F7D0C5E39D500592105 /* ExampleShader.vert in Resources */,
+				1A2F66C20C5D4E30003872C8 /* ExampleShader.frag in Resources */,
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				1A2F65780C5CF93F003872C8 /* ExampleController.m in Sources */,
+				1A2F65890C5CFAA6003872C8 /* ExampleOpenGLView.m in Sources */,
+				1A2F65920C5CFB37003872C8 /* ExampleModel.m in Sources */,
+				1A2F66E70C5D4FB0003872C8 /* JAShaderMaterial.m in Sources */,
+				1A2F66E80C5D4FB0003872C8 /* JAShaderUniformBindingTypes.m in Sources */,
+				1A2F66E90C5D4FB0003872C8 /* JAShaderUniform.m in Sources */,
+				1A2F66EA0C5D4FB0003872C8 /* JAShaderProgram.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = GLSLBindingSample;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = GLSLBindingSample;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "GLSLBindingSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GLSLBindingSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
