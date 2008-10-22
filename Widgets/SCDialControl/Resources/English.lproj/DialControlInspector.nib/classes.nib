@@ -1,0 +1,27 @@
+{
+    IBClasses = (
+        {
+            CLASS = DialControlInspector; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                doubleFormatter = NSFormatter; 
+                falloffField = NSTextField; 
+                intFormatter = NSFormatter; 
+                maxField = NSTextField; 
+                minField = NSTextField; 
+                rzCheckBox = NSButton; 
+                rzMaxField = NSTextField; 
+                rzMinField = NSTextField; 
+                secTicksField = NSTextField; 
+                smoothCheckBox = NSButton; 
+                tagField = NSTextField; 
+                ticksField = NSTextField; 
+                valField = NSTextField; 
+                zeroToOneFormatter = NSFormatter; 
+            }; 
+            SUPERCLASS = IBInspector; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

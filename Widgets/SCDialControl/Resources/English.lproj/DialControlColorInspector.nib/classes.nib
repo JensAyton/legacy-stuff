@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {
+            CLASS = DialControlColorInspector; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                dialColorWell = NSColorWell; 
+                faceColorWell = NSColorWell; 
+                frameColorWell = NSColorWell; 
+                knobColorWell = NSColorWell; 
+                rzColorWell = NSColorWell; 
+                smoothColorWell = NSColorWell; 
+                tickColorWell = NSColorWell; 
+            }; 
+            SUPERCLASS = IBInspector; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

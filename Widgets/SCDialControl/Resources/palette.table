@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>Class</key>
+	<string>DialControlPalette</string>
+	<key>NibFile</key>
+	<string>DialControlPalette</string>
+	<key>Icon</key>
+	<string>DialControlPalette</string>
+	<key>ToolTips</key>
+	<string>SCDial</string>
+	<key>ExportClasses</key>
+	<array>
+		<string>SCDial</string>
+		<string>SCDialCell</string>
+		<string>DialControlInspector</string>
+	</array>
+	<key>Name</key>
+	<string>SCDial</string>
+	<key>Title</key>
+	<string>SCDial</string>
+	</dict>
+</plist>

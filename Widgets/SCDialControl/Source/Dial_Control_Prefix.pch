@@ -1,0 +1,10 @@
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#ifdef IB_PALETTE
+		#import <InterfaceBuilder/InterfaceBuilder.h>
+	#endif
+#endif
+
+#include <stdlib.h>
+#include <stdint.h>
+#include <Cocoa/Cocoa.h>

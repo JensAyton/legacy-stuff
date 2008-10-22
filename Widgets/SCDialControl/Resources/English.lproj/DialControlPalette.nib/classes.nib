@@ -1,0 +1,40 @@
+{
+    IBClasses = (
+        {CLASS = DialControlPalette; LANGUAGE = ObjC; SUPERCLASS = IBPalette; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                takeDialColorFrom = id; 
+                takeFaceColorFrom = id; 
+                takeFrameColorFrom = id; 
+                takeKnobColorFrom = id; 
+                takeRedZoneColorFrom = id; 
+                takeShowSmoothFrom = id; 
+                takeSmoothColorFrom = id; 
+                takeSmoothRateFrom = id; 
+                takeSmoothValueFrom = id; 
+                takeTickColorFrom = id; 
+            }; 
+            CLASS = SCDial; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSControl; 
+        }, 
+        {
+            ACTIONS = {
+                takeDialColorFrom = id; 
+                takeFaceColorFrom = id; 
+                takeFrameColorFrom = id; 
+                takeKnobColorFrom = id; 
+                takeShowSmoothFrom = id; 
+                takeSmoothColorFrom = id; 
+                takeSmoothRateFrom = id; 
+                takeSmoothValueFrom = id; 
+                takeTickColorFrom = id; 
+            }; 
+            CLASS = SCDialCell; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSActionCell; 
+        }
+    ); 
+    IBVersion = 1; 
+}

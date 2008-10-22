@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A4324F0074CD155003014FA /* SCDial.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4324EE074CD155003014FA /* SCDial.h */; };
+		1A4324F1074CD155003014FA /* SCDial.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4324EF074CD155003014FA /* SCDial.m */; };
+		1A5CD934074CE81300E008E6 /* DialControlTestApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A5CD932074CE81300E008E6 /* DialControlTestApplication.h */; };
+		1A5CD935074CE81300E008E6 /* DialControlTestApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5CD933074CE81300E008E6 /* DialControlTestApplication.m */; };
+		1A69A8ED074D3B6800EB2309 /* Dial Control Palette-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A69A8EC074D3B6800EB2309 /* Dial Control Palette-Info.plist */; };
+		1A69A8EF074D3B7C00EB2309 /* palette.table in Resources */ = {isa = PBXBuildFile; fileRef = 1A69A8EE074D3B7C00EB2309 /* palette.table */; };
+		1A69A8FA074D3C1600EB2309 /* DialControlPalette.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A69A8F8074D3C1600EB2309 /* DialControlPalette.h */; };
+		1A69A8FB074D3C1600EB2309 /* DialControlPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A69A8F9074D3C1600EB2309 /* DialControlPalette.m */; };
+		1A69A8FF074D3C3C00EB2309 /* InterfaceBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A69A8FE074D3C3C00EB2309 /* InterfaceBuilder.framework */; };
+		1A69A91B074D3E8900EB2309 /* SCDial.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4324EE074CD155003014FA /* SCDial.h */; };
+		1A69A91C074D3E8A00EB2309 /* SCDial.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4324EF074CD155003014FA /* SCDial.m */; };
+		1A69A91F074D402000EB2309 /* DialControlInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A69A91D074D402000EB2309 /* DialControlInspector.h */; };
+		1A69A920074D402000EB2309 /* DialControlInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A69A91E074D402000EB2309 /* DialControlInspector.m */; };
+		1A69A923074D406600EB2309 /* DialControlInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1A69A921074D406600EB2309 /* DialControlInspector.nib */; };
+		1AD479B8074D514A00E0E6F0 /* DialControlPalette.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD479B6074D514A00E0E6F0 /* DialControlPalette.nib */; };
+		1AD47A0A074D54BD00E0E6F0 /* SCDial-IBAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AD47A08074D54BD00E0E6F0 /* SCDial-IBAdditions.h */; };
+		1AD47A0B074D54BD00E0E6F0 /* SCDial-IBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD47A09074D54BD00E0E6F0 /* SCDial-IBAdditions.m */; };
+		1AD47A11074D5AF200E0E6F0 /* DialControlPalette.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AD47A0F074D5AF200E0E6F0 /* DialControlPalette.strings */; };
+		1AD47A14074D5BCE00E0E6F0 /* DialControlColorInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AD47A12074D5BCE00E0E6F0 /* DialControlColorInspector.h */; };
+		1AD47A15074D5BCE00E0E6F0 /* DialControlColorInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD47A13074D5BCE00E0E6F0 /* DialControlColorInspector.m */; };
+		1AD47A18074D5BE800E0E6F0 /* DialControlColorInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD47A16074D5BE800E0E6F0 /* DialControlColorInspector.nib */; };
+		8D1107280486CEB800E47090 /* Dial_Control_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* Dial_Control_Prefix.pch */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1A4324EE074CD155003014FA /* SCDial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCDial.h; sourceTree = "<group>"; };
+		1A4324EF074CD155003014FA /* SCDial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCDial.m; sourceTree = "<group>"; };
+		1A5CD932074CE81300E008E6 /* DialControlTestApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialControlTestApplication.h; sourceTree = "<group>"; };
+		1A5CD933074CE81300E008E6 /* DialControlTestApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialControlTestApplication.m; sourceTree = "<group>"; };
+		1A69A8E1074D3AE500EB2309 /* Dial Control Palette.palette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dial Control Palette.palette"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A69A8EC074D3B6800EB2309 /* Dial Control Palette-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Dial Control Palette-Info.plist"; sourceTree = "<group>"; };
+		1A69A8EE074D3B7C00EB2309 /* palette.table */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = palette.table; sourceTree = "<group>"; };
+		1A69A8F8074D3C1600EB2309 /* DialControlPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialControlPalette.h; sourceTree = "<group>"; };
+		1A69A8F9074D3C1600EB2309 /* DialControlPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialControlPalette.m; sourceTree = "<group>"; };
+		1A69A8FE074D3C3C00EB2309 /* InterfaceBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilder.framework; path = /System/Library/Frameworks/InterfaceBuilder.framework; sourceTree = "<absolute>"; };
+		1A69A91D074D402000EB2309 /* DialControlInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialControlInspector.h; sourceTree = "<group>"; };
+		1A69A91E074D402000EB2309 /* DialControlInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialControlInspector.m; sourceTree = "<group>"; };
+		1A69A922074D406600EB2309 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/DialControlInspector.nib; sourceTree = "<group>"; };
+		1AD479B7074D514A00E0E6F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/DialControlPalette.nib; sourceTree = "<group>"; };
+		1AD47A08074D54BD00E0E6F0 /* SCDial-IBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCDial-IBAdditions.h"; sourceTree = "<group>"; };
+		1AD47A09074D54BD00E0E6F0 /* SCDial-IBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCDial-IBAdditions.m"; sourceTree = "<group>"; };
+		1AD47A10074D5AF200E0E6F0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/DialControlPalette.strings; sourceTree = "<group>"; };
+		1AD47A12074D5BCE00E0E6F0 /* DialControlColorInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialControlColorInspector.h; sourceTree = "<group>"; };
+		1AD47A13074D5BCE00E0E6F0 /* DialControlColorInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialControlColorInspector.m; sourceTree = "<group>"; };
+		1AD47A17074D5BE800E0E6F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/DialControlColorInspector.nib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* Dial_Control_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dial_Control_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Dial Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dial Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A69A8DF074D3AE500EB2309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A69A8FF074D3C3C00EB2309 /* InterfaceBuilder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1A4324EE074CD155003014FA /* SCDial.h */,
+				1A4324EF074CD155003014FA /* SCDial.m */,
+				1A5CD932074CE81300E008E6 /* DialControlTestApplication.h */,
+				1A5CD933074CE81300E008E6 /* DialControlTestApplication.m */,
+				1A69A8F8074D3C1600EB2309 /* DialControlPalette.h */,
+				1A69A8F9074D3C1600EB2309 /* DialControlPalette.m */,
+				1A69A91D074D402000EB2309 /* DialControlInspector.h */,
+				1A69A91E074D402000EB2309 /* DialControlInspector.m */,
+				1AD47A08074D54BD00E0E6F0 /* SCDial-IBAdditions.h */,
+				1AD47A09074D54BD00E0E6F0 /* SCDial-IBAdditions.m */,
+				1AD47A12074D5BCE00E0E6F0 /* DialControlColorInspector.h */,
+				1AD47A13074D5BCE00E0E6F0 /* DialControlColorInspector.m */,
+			);
+			name = Classes;
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Dial Control.app */,
+				1A69A8E1074D3AE500EB2309 /* Dial Control Palette.palette */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Dial Control Test */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "Dial Control Test";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Dial_Control_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			path = Source;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1AD47A0F074D5AF200E0E6F0 /* DialControlPalette.strings */,
+				1AD479B6074D514A00E0E6F0 /* DialControlPalette.nib */,
+				1A69A921074D406600EB2309 /* DialControlInspector.nib */,
+				1A69A8EC074D3B6800EB2309 /* Dial Control Palette-Info.plist */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				1A69A8EE074D3B7C00EB2309 /* palette.table */,
+				1AD47A16074D5BE800E0E6F0 /* DialControlColorInspector.nib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A69A8FE074D3C3C00EB2309 /* InterfaceBuilder.framework */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1A69A8DC074D3AE500EB2309 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A69A8FA074D3C1600EB2309 /* DialControlPalette.h in Headers */,
+				1A69A91B074D3E8900EB2309 /* SCDial.h in Headers */,
+				1A69A91F074D402000EB2309 /* DialControlInspector.h in Headers */,
+				1AD47A0A074D54BD00E0E6F0 /* SCDial-IBAdditions.h in Headers */,
+				1AD47A14074D5BCE00E0E6F0 /* DialControlColorInspector.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107270486CEB800E47090 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1107280486CEB800E47090 /* Dial_Control_Prefix.pch in Headers */,
+				1A4324F0074CD155003014FA /* SCDial.h in Headers */,
+				1A5CD934074CE81300E008E6 /* DialControlTestApplication.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1A69A8E0074D3AE500EB2309 /* Dial Control Palette */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AEA224C097B2788002CA2A2 /* Build configuration list for PBXNativeTarget "Dial Control Palette" */;
+			buildPhases = (
+				1A69A8DC074D3AE500EB2309 /* Headers */,
+				1A69A8DD074D3AE500EB2309 /* Resources */,
+				1A69A8DE074D3AE500EB2309 /* Sources */,
+				1A69A8DF074D3AE500EB2309 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dial Control Palette";
+			productName = "Dial Control Palette";
+			productReference = 1A69A8E1074D3AE500EB2309 /* Dial Control Palette.palette */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1107260486CEB800E47090 /* Dial Control Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AEA2248097B2788002CA2A2 /* Build configuration list for PBXNativeTarget "Dial Control Test" */;
+			buildPhases = (
+				8D1107270486CEB800E47090 /* Headers */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dial Control Test";
+			productInstallPath = "$(HOME)/Applications";
+			productName = CPUInfo;
+			productReference = 8D1107320486CEB800E47090 /* Dial Control.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1AEA2250097B2788002CA2A2 /* Build configuration list for PBXProject "Dial Control" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Dial Control Test */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Dial Control Test */,
+				1A69A8E0074D3AE500EB2309 /* Dial Control Palette */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A69A8DD074D3AE500EB2309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A69A8ED074D3B6800EB2309 /* Dial Control Palette-Info.plist in Resources */,
+				1A69A8EF074D3B7C00EB2309 /* palette.table in Resources */,
+				1A69A923074D406600EB2309 /* DialControlInspector.nib in Resources */,
+				1AD479B8074D514A00E0E6F0 /* DialControlPalette.nib in Resources */,
+				1AD47A11074D5AF200E0E6F0 /* DialControlPalette.strings in Resources */,
+				1AD47A18074D5BE800E0E6F0 /* DialControlColorInspector.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A69A8DE074D3AE500EB2309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A69A8FB074D3C1600EB2309 /* DialControlPalette.m in Sources */,
+				1A69A91C074D3E8A00EB2309 /* SCDial.m in Sources */,
+				1A69A920074D402000EB2309 /* DialControlInspector.m in Sources */,
+				1AD47A0B074D54BD00E0E6F0 /* SCDial-IBAdditions.m in Sources */,
+				1AD47A15074D5BCE00E0E6F0 /* DialControlColorInspector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				1A4324F1074CD155003014FA /* SCDial.m in Sources */,
+				1A5CD935074CE81300E008E6 /* DialControlTestApplication.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1A69A921074D406600EB2309 /* DialControlInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A69A922074D406600EB2309 /* English */,
+			);
+			name = DialControlInspector.nib;
+			sourceTree = "<group>";
+		};
+		1AD479B6074D514A00E0E6F0 /* DialControlPalette.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AD479B7074D514A00E0E6F0 /* English */,
+			);
+			name = DialControlPalette.nib;
+			sourceTree = "<group>";
+		};
+		1AD47A0F074D5AF200E0E6F0 /* DialControlPalette.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AD47A10074D5AF200E0E6F0 /* English */,
+			);
+			name = DialControlPalette.strings;
+			sourceTree = "<group>";
+		};
+		1AD47A16074D5BE800E0E6F0 /* DialControlColorInspector.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AD47A17074D5BE800E0E6F0 /* English */,
+			);
+			name = DialControlColorInspector.nib;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1AEA2249097B2788002CA2A2 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Dial_Control_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Dial Control";
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Development;
+		};
+		1AEA224A097B2788002CA2A2 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Dial_Control_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Dial Control";
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Deployment;
+		};
+		1AEA224B097B2788002CA2A2 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Dial_Control_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Dial Control";
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		1AEA224D097B2788002CA2A2 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Dial_Control_Prefix.pch;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "Resources/Dial Control Palette-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "-DIB_PALETTE";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Dial Control Palette";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = palette;
+			};
+			name = Development;
+		};
+		1AEA224E097B2788002CA2A2 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Dial_Control_Prefix.pch;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "Resources/Dial Control Palette-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "-DIB_PALETTE";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Dial Control Palette";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = palette;
+			};
+			name = Deployment;
+		};
+		1AEA224F097B2788002CA2A2 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Dial_Control_Prefix.pch;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "Resources/Dial Control Palette-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "-DIB_PALETTE";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Dial Control Palette";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = palette;
+			};
+			name = Default;
+		};
+		1AEA2251097B2788002CA2A2 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Development;
+		};
+		1AEA2252097B2788002CA2A2 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Deployment;
+		};
+		1AEA2253097B2788002CA2A2 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AEA2248097B2788002CA2A2 /* Build configuration list for PBXNativeTarget "Dial Control Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AEA2249097B2788002CA2A2 /* Development */,
+				1AEA224A097B2788002CA2A2 /* Deployment */,
+				1AEA224B097B2788002CA2A2 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		1AEA224C097B2788002CA2A2 /* Build configuration list for PBXNativeTarget "Dial Control Palette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AEA224D097B2788002CA2A2 /* Development */,
+				1AEA224E097B2788002CA2A2 /* Deployment */,
+				1AEA224F097B2788002CA2A2 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		1AEA2250097B2788002CA2A2 /* Build configuration list for PBXProject "Dial Control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AEA2251097B2788002CA2A2 /* Development */,
+				1AEA2252097B2788002CA2A2 /* Deployment */,
+				1AEA2253097B2788002CA2A2 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
