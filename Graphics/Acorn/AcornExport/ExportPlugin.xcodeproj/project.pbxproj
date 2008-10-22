@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A325FC00CB1326100538FE5 /* JAACPluginFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A325FBF0CB1326100538FE5 /* JAACPluginFramework.m */; };
+		1A3260840CB13ED400538FE5 /* JAImageIOExportAccessoryView.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1A3260820CB13ED400538FE5 /* JAImageIOExportAccessoryView.nib */; };
+		1A3260890CB13EE500538FE5 /* JAImageIOExportAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3260880CB13EE500538FE5 /* JAImageIOExportAccessoryView.m */; };
+		1A3262970CB2313600538FE5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3262960CB2313600538FE5 /* WebKit.framework */; };
+		1A3318020CAA73BC007DABDE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A3318000CAA73BC007DABDE /* Localizable.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		CCF900820C29E1CB00BA85E7 /* JAImageIOExportPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF900810C29E1CB00BA85E7 /* JAImageIOExportPlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1A325EF10CB1220600538FE5 /* Export-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Export-Info.plist"; sourceTree = "<group>"; };
+		1A325FBE0CB1326100538FE5 /* JAACPluginFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAACPluginFramework.h; sourceTree = "<group>"; };
+		1A325FBF0CB1326100538FE5 /* JAACPluginFramework.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAACPluginFramework.m; sourceTree = "<group>"; };
+		1A3260830CB13ED400538FE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = en.lproj/JAImageIOExportAccessoryView.nib; sourceTree = "<group>"; };
+		1A3260870CB13EE500538FE5 /* JAImageIOExportAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAImageIOExportAccessoryView.h; sourceTree = "<group>"; };
+		1A3260880CB13EE500538FE5 /* JAImageIOExportAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAImageIOExportAccessoryView.m; sourceTree = "<group>"; };
+		1A3262960CB2313600538FE5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		1A3318010CAA73BC007DABDE /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* ImageIO Export.acplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ImageIO Export.acplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCF900800C29E1CB00BA85E7 /* JAImageIOExportPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAImageIOExportPlugin.h; sourceTree = "<group>"; };
+		CCF900810C29E1CB00BA85E7 /* JAImageIOExportPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAImageIOExportPlugin.m; sourceTree = "<group>"; };
+		CCF900860C29E1D800BA85E7 /* ACPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPlugin.h; sourceTree = "<group>"; };
+		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				1A3262970CB2313600538FE5 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* acplugins */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Source */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = acplugins;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A325EF10CB1220600538FE5 /* Export-Info.plist */,
+				1A3260820CB13ED400538FE5 /* JAImageIOExportAccessoryView.nib */,
+				1A3318000CAA73BC007DABDE /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CCF900860C29E1D800BA85E7 /* ACPlugin.h */,
+				CCF900800C29E1CB00BA85E7 /* JAImageIOExportPlugin.h */,
+				CCF900810C29E1CB00BA85E7 /* JAImageIOExportPlugin.m */,
+				1A325FBE0CB1326100538FE5 /* JAACPluginFramework.h */,
+				1A325FBF0CB1326100538FE5 /* JAACPluginFramework.m */,
+				1A3260870CB13EE500538FE5 /* JAImageIOExportAccessoryView.h */,
+				1A3260880CB13EE500538FE5 /* JAImageIOExportAccessoryView.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A3262960CB2313600538FE5 /* WebKit.framework */,
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+				D2F7E65807B2D6F200F64583 /* CoreData.framework */,
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* ImageIO Export.acplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* Export */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "Export" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Export;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = acplugins;
+			productReference = 8D5B49B6048680CD000E48DA /* ImageIO Export.acplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "ExportPlugin" */;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* acplugins */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* Export */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A3318020CAA73BC007DABDE /* Localizable.strings in Resources */,
+				1A3260840CB13ED400538FE5 /* JAImageIOExportAccessoryView.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCF900820C29E1CB00BA85E7 /* JAImageIOExportPlugin.m in Sources */,
+				1A325FC00CB1326100538FE5 /* JAACPluginFramework.m in Sources */,
+				1A3260890CB13EE500538FE5 /* JAImageIOExportAccessoryView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1A3260820CB13ED400538FE5 /* JAImageIOExportAccessoryView.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A3260830CB13ED400538FE5 /* en */,
+			);
+			name = JAImageIOExportAccessoryView.nib;
+			sourceTree = "<group>";
+		};
+		1A3318000CAA73BC007DABDE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A3318010CAA73BC007DABDE /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ACPLUGIN_CLASS_NAME = JAImageIOExportPlugin;
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PREFIX_HEADER = "Source/$(ACPLUGIN_CLASS_NAME).h";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "ACPLUGIN_CLASS_NAME=$ACPLUGIN_CLASS_NAME";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				INFOPLIST_FILE = "Export-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = "ImageIO Export";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
+				WRAPPER_EXTENSION = acplugin;
+			};
+			name = Release;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		CC2C7CA00B0BC41F00A22730 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		CC2C7CA10B0BC41F00A22730 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ACPLUGIN_CLASS_NAME = JAImageIOExportPlugin;
+				GCC_MODEL_TUNING = G5;
+				GCC_PREFIX_HEADER = "Source/$(ACPLUGIN_CLASS_NAME).h";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "ACPLUGIN_CLASS_NAME=$ACPLUGIN_CLASS_NAME";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				INFOPLIST_FILE = "Export-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = "ImageIO Export";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
+				WRAPPER_EXTENSION = acplugin;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "Export" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913C08733D840010E9CD /* Release */,
+				CC2C7CA10B0BC41F00A22730 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "ExportPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB914008733D840010E9CD /* Release */,
+				CC2C7CA00B0BC41F00A22730 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

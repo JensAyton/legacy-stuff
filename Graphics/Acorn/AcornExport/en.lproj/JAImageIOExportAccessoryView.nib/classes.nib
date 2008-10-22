@@ -1,0 +1,22 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {changeSaveType = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = JAImageIOExportAccessoryView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_contentView" = NSView; 
+                "_formatMenuButton" = NSPopUpButton; 
+                "_qualityHider" = NSView; 
+                "_qualitySlider" = NSSlider; 
+            }; 
+            SUPERCLASS = NSView; 
+        }
+    ); 
+    IBVersion = 1; 
+}
