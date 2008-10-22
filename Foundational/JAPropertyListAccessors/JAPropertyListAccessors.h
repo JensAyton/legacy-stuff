@@ -351,8 +351,12 @@ SOFTWARE.
 
 // *** Value extraction utilities ***
 
-#if defined (__GNUC__) && !defined (JA_GCC_ATTR)
+#ifndef JA_GCC_ATTR
+#ifdef __GNUC__
 #define JA_GCC_ATTR(x) __attribute__(x)
+#else
+#define JA_GCC_ATTR(x)
+#endif
 #define JA_PROPERTY_LIST_ACCESSORS_DEFINED_JA_GCC_ATTR 1
 #endif
 
