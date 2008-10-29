@@ -102,7 +102,7 @@ SOFTWARE.
 // Objects; default: nil
 // - (id) objectAtIndex:(unsigned long)index;	// Defined in framework
 - (id) objectAtIndexNoThrow:(unsigned long)index;
-- (id) objectOfClass:(Class)class atIndex:(unsigned long)index;
+- (id) objectOfClass:(Class)aClass atIndex:(unsigned long)index;
 - (NSString *) stringAtIndex:(unsigned long)index;
 - (NSArray *) arrayAtIndex:(unsigned long)index;
 - (NSSet *) setAtIndex:(unsigned long)index;
@@ -137,7 +137,7 @@ SOFTWARE.
 // Objects
 - (id) objectAtIndex:(unsigned long)index defaultValue:(id)value;
 - (id) objectAtIndexNoThrow:(unsigned long)index defaultValue:(id)value;
-- (id) objectOfClass:(Class)class atIndex:(unsigned long)index defaultValue:(id)value;
+- (id) objectOfClass:(Class)aClass atIndex:(unsigned long)index defaultValue:(id)value;
 - (NSString *) stringAtIndex:(unsigned long)index defaultValue:(NSString *)value;
 - (NSArray *) arrayAtIndex:(unsigned long)index defaultValue:(NSArray *)value;
 - (NSSet *) setAtIndex:(unsigned long)index defaultValue:(NSSet *)value;
@@ -176,7 +176,7 @@ SOFTWARE.
 
 // Objects; default: nil
 // - (id) objectForKey:(id)key;			// Defined in framework
-- (id) objectOfClass:(Class)class forKey:(id)key;
+- (id) objectOfClass:(Class)aClass forKey:(id)key;
 - (NSString *) stringForKey:(id)key;
 - (NSArray *) arrayForKey:(id)key;
 - (NSSet *) setForKey:(id)key;
@@ -210,7 +210,7 @@ SOFTWARE.
 
 // Objects
 - (id) objectForKey:(id)key defaultValue:(id)value;
-- (id) objectOfClass:(Class)class forKey:(id)key defaultValue:(id)value;
+- (id) objectOfClass:(Class)aClass forKey:(id)key defaultValue:(id)value;
 - (NSString *) stringForKey:(id)key defaultValue:(NSString *)value;
 - (NSArray *) arrayForKey:(id)key defaultValue:(NSArray *)value;
 - (NSSet *) setForKey:(id)key defaultValue:(NSSet *)value;
@@ -249,7 +249,7 @@ SOFTWARE.
 
 // Objects; default: nil
 // - (id) objectForKey:(id)key;			// Defined in framework
-- (id) objectOfClass:(Class)class forKey:(id)key;
+- (id) objectOfClass:(Class)aClass forKey:(id)key;
 // - (NSString *) stringForKey:(id)key;	// Defined in framework
 // - (NSArray *) arrayForKey:(id)key;	// Defined in framework
 - (NSSet *) setForKey:(id)key;
@@ -283,7 +283,7 @@ SOFTWARE.
 
 // Objects
 - (id) objectForKey:(id)key defaultValue:(id)value;
-- (id) objectOfClass:(Class)class forKey:(id)key defaultValue:(id)value;
+- (id) objectOfClass:(Class)aClass forKey:(id)key defaultValue:(id)value;
 - (NSString *) stringForKey:(id)key defaultValue:(NSString *)value;
 - (NSArray *) arrayForKey:(id)key defaultValue:(NSArray *)value;
 - (NSSet *) setForKey:(id)key defaultValue:(NSSet *)value;
@@ -292,7 +292,7 @@ SOFTWARE.
 
 // Default: nil
 // - (id) objectForKey:(id)key;	// Already defined
-- (id) objectOfClass:(Class)class forKey:(id)key;
+- (id) objectOfClass:(Class)aClass forKey:(id)key;
 // - (NSString *) stringForKey:(id)key;
 // - (NSArray *) arrayForKey:(id)key;
 - (NSSet *) setForKey:(id)key;
