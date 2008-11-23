@@ -1,7 +1,7 @@
 /*
 
 JAPropertyListAccessors.m
-Version 1.0.1
+Version 1.0.2
 
 
 Copyright © 2007–2008 Jens Ayton
@@ -800,7 +800,7 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 }
 
 
-- (double) doubleForKey:(NSString *)key
+- (double) doubleForKey:(id)key
 {
 	return JADoubleFromObject([self objectForKey:key], 0.0);
 }

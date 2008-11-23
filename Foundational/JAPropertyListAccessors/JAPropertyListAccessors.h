@@ -1,7 +1,7 @@
 /*
 
 JAPropertyListAccessors.h
-Version 1.0.1
+Version 1.0.2
 
 Convenience accessors for NSArray, NSDictionary and NSUserDefaults.
 In addition to being convenient, these perform type checking. Which is,
@@ -40,6 +40,7 @@ behaviour for arbitrary objects.
 
 
 CHANGE LOG
+	1.0.2		Objective-C++ compatible.
 	1.0.1		Default value (rather than nil) is now returned when
 				conversion to string fails.
 				String conversion now uses -stringValue if available.
