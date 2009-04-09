@@ -225,9 +225,9 @@ SOFTWARE.
 @interface NSUserDefaults (JAPropertyListAccessors)
 
 // Basic integer and boolean accessors; default 0/NO
-- (long) integerForKey:(id)key;
+// - (long) integerForKey:(id)key;		// Defined in framework (Leopard and later)
 - (unsigned long) unsignedIntegerForKey:(id)key;
-- (BOOL) boolForKey:(id)key;
+// - (BOOL) boolForKey:(id)key;			// Defined in framework
 
 // Specific integer types; default 0
 - (char) charForKey:(id)key;
@@ -244,7 +244,7 @@ SOFTWARE.
 
 // Floats; default: 0.0
 // - (float) floatForKey:(id)key;		// Defined in framework
-- (double) doubleForKey:(id)key;
+//- (double) doubleForKey:(id)key;		// Defined in framework
 - (float) nonNegativeFloatForKey:(id)key;
 - (double) nonNegativeDoubleForKey:(id)key;
 
@@ -348,6 +348,11 @@ SOFTWARE.
 
 @end
 
+
+
+#if __cplusplus
+extern "C" {
+#endif
 
 
 // *** Value extraction utilities ***
@@ -458,4 +463,9 @@ JA_DEFINE_CLAMP_PAIR(long, Long, LONG)
 #ifdef JA_PROPERTY_LIST_ACCESSORS_DEFINED_JA_GCC_ATTR
 #undef JA_PROPERTY_LIST_ACCESSORS_DEFINED_JA_GCC_ATTR
 #undef JA_GCC_ATTR
+#endif
+
+
+#if __cplusplus
+}
 #endif

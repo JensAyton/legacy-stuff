@@ -33,7 +33,7 @@ static NSSet *SetForObject(id object, NSSet *defaultValue);
 static NSString *StringForObject(id object, NSString *defaultValue);
 
 
-@implementation NSArray (OOExtractor)
+@implementation NSArray (JAPropertyListAccessors)
 
 - (char) charAtIndex:(unsigned long)index defaultValue:(char)value
 {
@@ -54,6 +54,11 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 
 
 - (long) longAtIndex:(unsigned long)index defaultValue:(long)value
+{
+	return JALongFromObject([self objectAtIndexNoThrow:index], value);
+}
+
+- (long) integerAtIndex:(unsigned long)index defaultValue:(long)value
 {
 	return JALongFromObject([self objectAtIndexNoThrow:index], value);
 }
@@ -84,6 +89,12 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 
 
 - (unsigned long) unsignedLongAtIndex:(unsigned long)index defaultValue:(unsigned long)value
+{
+	return JAUnsignedLongFromObject([self objectAtIndexNoThrow:index], value);
+}
+
+
+- (unsigned long) unsignedIntegerAtIndex:(unsigned long)index defaultValue:(unsigned long)value
 {
 	return JAUnsignedLongFromObject([self objectAtIndexNoThrow:index], value);
 }
@@ -216,6 +227,12 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 }
 
 
+- (long) integerAtIndex:(unsigned long)index
+{
+	return [self integerAtIndex:index defaultValue:0];
+}
+
+
 - (long long) longLongAtIndex:(unsigned long)index
 {
 	return [self longLongAtIndex:index defaultValue:0];
@@ -243,6 +260,12 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 - (unsigned long) unsignedLongAtIndex:(unsigned long)index
 {
 	return [self unsignedLongAtIndex:index defaultValue:0];
+}
+
+
+- (unsigned long) unsignedIntegerAtIndex:(unsigned long)index
+{
+	return [self unsignedIntegerAtIndex:index defaultValue:0];
 }
 
 
@@ -320,7 +343,7 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 @end
 
 
-@implementation NSDictionary (OOExtractor)
+@implementation NSDictionary (JAPropertyListAccessors)
 
 - (char) charForKey:(id)key defaultValue:(char)value
 {
@@ -341,6 +364,12 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 
 
 - (long) longForKey:(id)key defaultValue:(long)value
+{
+	return JALongFromObject([self objectForKey:key], value);
+}
+
+
+- (long) integerForKey:(id)key defaultValue:(long)value
 {
 	return JALongFromObject([self objectForKey:key], value);
 }
@@ -371,6 +400,12 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 
 
 - (unsigned long) unsignedLongForKey:(id)key defaultValue:(unsigned long)value
+{
+	return JAUnsignedLongFromObject([self objectForKey:key], value);
+}
+
+
+- (unsigned long) unsignedIntegerForKey:(id)key defaultValue:(unsigned long)value
 {
 	return JAUnsignedLongFromObject([self objectForKey:key], value);
 }
@@ -490,6 +525,12 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 }
 
 
+- (long) integerForKey:(id)key
+{
+	return [self integerForKey:key defaultValue:0];
+}
+
+
 - (long long) longLongForKey:(id)key
 {
 	return [self longLongForKey:key defaultValue:0];
@@ -517,6 +558,12 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 - (unsigned long) unsignedLongForKey:(id)key
 {
 	return [self unsignedLongForKey:key defaultValue:0];
+}
+
+
+- (unsigned long) unsignedIntegerForKey:(id)key
+{
+	return [self unsignedIntegerForKey:key defaultValue:0];
 }
 
 
@@ -594,7 +641,7 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 @end
 
 
-@implementation NSUserDefaults (OOExtractor)
+@implementation NSUserDefaults (JAPropertyListAccessors)
 
 - (char) charForKey:(id)key defaultValue:(char)value
 {
@@ -615,6 +662,12 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 
 
 - (long) longForKey:(id)key defaultValue:(long)value
+{
+	return JALongFromObject([self objectForKey:key], value);
+}
+
+
+- (long) integerForKey:(id)key defaultValue:(long)value
 {
 	return JALongFromObject([self objectForKey:key], value);
 }
@@ -645,6 +698,12 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 
 
 - (unsigned long) unsignedLongForKey:(id)key defaultValue:(unsigned long)value
+{
+	return JAUnsignedLongFromObject([self objectForKey:key], value);
+}
+
+
+- (unsigned long) unsignedIntegerForKey:(id)key defaultValue:(unsigned long)value
 {
 	return JAUnsignedLongFromObject([self objectForKey:key], value);
 }
@@ -794,15 +853,15 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 }
 
 
-- (unsigned long long) unsignedLongLongForKey:(id)key
+- (unsigned long) unsignedIntegerForKey:(id)key
 {
-	return [self unsignedLongLongForKey:key defaultValue:0];
+	return [self unsignedIntegerForKey:key defaultValue:0];
 }
 
 
-- (double) doubleForKey:(id)key
+- (unsigned long long) unsignedLongLongForKey:(id)key
 {
-	return JADoubleFromObject([self objectForKey:key], 0.0);
+	return [self unsignedLongLongForKey:key defaultValue:0];
 }
 
 
