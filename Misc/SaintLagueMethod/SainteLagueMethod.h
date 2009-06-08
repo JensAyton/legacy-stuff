@@ -39,7 +39,6 @@ typedef struct SLParty
 {
 	void				*tag;	// For client to identify parties
 	uintmax_t			votes;	// Input
-	bool				valid;	// True (on input) if party can receive seats (set to false for spoiled ballots etc)
 	uintmax_t			seats;	// Output
 } SLParty;
 

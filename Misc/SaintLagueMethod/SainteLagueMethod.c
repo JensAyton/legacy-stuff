@@ -68,12 +68,12 @@ static int CompareSLCalcInfo(const void *a, const void *b)
 void SLCalculate(SLParty *parties, size_t count, uintmax_t seats, uintmax_t thresholdNumerator, uintmax_t thresholdDenominator)
 {
 	uintmax_t			i, totalVotes = 0;
-	SLParty			excludedParties[14];
+	SLParty				excludedParties[14];
 	SLCalcInfo			calcParties[14];
 	size_t				excludedCount = 0, calcCount = 0;
 	
 	assert(parties != NULL);
-	assert(thresholdDenominator != 0 && thresholdNumerator != 0);
+	assert(thresholdDenominator != 0);
 	
 	// Count total votes.
 	for (i = 0; i < count; i++)
@@ -84,7 +84,7 @@ void SLCalculate(SLParty *parties, size_t count, uintmax_t seats, uintmax_t thre
 	// Divide parties into excluded (below threshold) and calc.
 	for (i = 0; i < count; i++)
 	{
-		if (!parties[i].valid || (parties[i].votes * thresholdDenominator < totalVotes * thresholdNumerator))
+		if (parties[i].votes * thresholdDenominator < totalVotes * thresholdNumerator)
 		{
 			excludedParties[excludedCount++] = parties[i];
 		}
@@ -118,14 +118,12 @@ void SLCalculate(SLParty *parties, size_t count, uintmax_t seats, uintmax_t thre
 	{
 		parties[i].tag = calcParties[i].tag;
 		parties[i].votes = calcParties[i].votes;
-		parties[i + calcCount].valid = true;
 		parties[i].seats = calcParties[i].seats;
 	}
 	for (i = 0; i < excludedCount; i++)
 	{
 		parties[i + calcCount].tag = excludedParties[i].tag;
 		parties[i + calcCount].votes = excludedParties[i].votes;
-		parties[i + calcCount].valid = excludedParties[i].valid;
 		parties[i + calcCount].seats = 0;
 	}
 }
