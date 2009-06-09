@@ -37,7 +37,7 @@
 
 typedef struct SLParty
 {
-	void				*tag;	// For client to identify parties
+	const void			*tag;	// For client to identify parties
 	uintmax_t			votes;	// Input
 	uintmax_t			seats;	// Output
 } SLParty;
@@ -50,3 +50,17 @@ typedef struct SLParty
 	parties.
 */
 void SLCalculate(SLParty *parties, size_t count, uintmax_t seats, uintmax_t thresholdNumerator, uintmax_t thresholdDenominator);
+
+
+/*	Optional client-defined logging function.
+*/
+#ifndef SL_LOGGING
+#define SL_LOGGING 0
+#endif
+
+#if SL_LOGGING
+// Client-defined.
+extern void PrintSLInfo(const void *tag, unsigned event, uintmax_t votes, uintmax_t totalVotes, uintmax_t seats, double comparator);
+#else
+#define PrintSLInfo(tag, event, votes, totalVotes, seats, comparator) do {} while (0)
+#endif

@@ -34,9 +34,18 @@
 #include <assert.h>
 
 
+enum SLEvent
+{
+	kSLPartyExcludedBelowThreshold,
+	kSLPartyIncludedInApportionment,
+	kSLPartySeatAssigned,
+	kSLPartyFinalSeats
+};
+
+
 typedef struct SLCalcInfo
 {
-	void				*tag;			// For client to identify parties.
+	const void			*tag;			// For client to identify parties.
 	uintmax_t			votes;			// Absolute number of votes cast.
 	uintmax_t			divisor;		// Divisor, multiplied by ten to allow integer maths. Starts at 14.
 	uintmax_t			nextDivisor;	// Next divisor to use (after a seat has been assigned), multiplied by ten. Starts at 30, increases by 20 per seat.
@@ -68,8 +77,8 @@ static int CompareSLCalcInfo(const void *a, const void *b)
 void SLCalculate(SLParty *parties, size_t count, uintmax_t seats, uintmax_t thresholdNumerator, uintmax_t thresholdDenominator)
 {
 	uintmax_t			i, totalVotes = 0;
-	SLParty				excludedParties[14];
-	SLCalcInfo			calcParties[14];
+	SLParty				excludedParties[count];
+	SLCalcInfo			calcParties[count];
 	size_t				excludedCount = 0, calcCount = 0;
 	
 	assert(parties != NULL);
@@ -87,6 +96,7 @@ void SLCalculate(SLParty *parties, size_t count, uintmax_t seats, uintmax_t thre
 		if (parties[i].votes * thresholdDenominator < totalVotes * thresholdNumerator)
 		{
 			excludedParties[excludedCount++] = parties[i];
+			PrintSLInfo(parties[i].tag, kSLPartyExcludedBelowThreshold, parties[i].votes, totalVotes, 0, 0.0);
 		}
 		else
 		{
@@ -95,6 +105,7 @@ void SLCalculate(SLParty *parties, size_t count, uintmax_t seats, uintmax_t thre
 			calcParties[calcCount].divisor = 14;
 			calcParties[calcCount].nextDivisor = 30;
 			calcParties[calcCount].seats = 0;
+			PrintSLInfo(parties[calcCount].tag, kSLPartyIncludedInApportionment, parties[calcCount].votes, totalVotes, 0, 0.0);
 			calcCount++;
 		}
 	}
@@ -108,6 +119,8 @@ void SLCalculate(SLParty *parties, size_t count, uintmax_t seats, uintmax_t thre
 			
 			// Zeroth party in list is next assignee
 			calcParties[0].seats++;
+			PrintSLInfo(calcParties[0].tag, kSLPartySeatAssigned, calcParties[0].votes, totalVotes, calcParties[0].seats, (double)calcParties[0].votes * 10.0 / (double)calcParties[0].divisor);
+			
 			calcParties[0].divisor = calcParties[0].nextDivisor;
 			calcParties[0].nextDivisor += 20;
 		}
@@ -119,11 +132,15 @@ void SLCalculate(SLParty *parties, size_t count, uintmax_t seats, uintmax_t thre
 		parties[i].tag = calcParties[i].tag;
 		parties[i].votes = calcParties[i].votes;
 		parties[i].seats = calcParties[i].seats;
+		
+		PrintSLInfo(parties[i].tag, kSLPartyFinalSeats, parties[i].votes, totalVotes, parties[i].seats, 0.0);
 	}
 	for (i = 0; i < excludedCount; i++)
 	{
 		parties[i + calcCount].tag = excludedParties[i].tag;
 		parties[i + calcCount].votes = excludedParties[i].votes;
 		parties[i + calcCount].seats = 0;
+		
+		PrintSLInfo(parties[i + calcCount].tag, kSLPartyFinalSeats, parties[i + calcCount].votes, totalVotes, 0, 0.0);
 	}
 }
