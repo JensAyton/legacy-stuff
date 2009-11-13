@@ -220,7 +220,7 @@ NSUInteger JAPixMapOptimumBytesPerRow(NSUInteger width, JAPixMapFormat format)
 	enum
 	{
 #if TARGET_OS_IPHONE
-		kOptimumPadding = 4
+		kOptimumPadding = 8
 #else
 		kOptimumPadding = 16
 #endif
