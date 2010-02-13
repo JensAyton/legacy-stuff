@@ -1,10 +1,10 @@
 /*
 
 JAPropertyListAccessors.m
-Version 1.0.2
+Version 1.1
 
 
-Copyright © 2007–2008 Jens Ayton
+Copyright © 2007–2010 Jens Ayton
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the “Software”), to deal
@@ -35,121 +35,121 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 
 @implementation NSArray (JAPropertyListAccessors)
 
-- (char) charAtIndex:(unsigned long)index defaultValue:(char)value
+- (char) ja_charAtIndex:(unsigned long)index defaultValue:(char)value
 {
-	return JACharFromObject([self objectAtIndexNoThrow:index], value);
+	return JACharFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (short) shortAtIndex:(unsigned long)index defaultValue:(short)value
+- (short) ja_shortAtIndex:(unsigned long)index defaultValue:(short)value
 {
-	return JAShortFromObject([self objectAtIndexNoThrow:index], value);
+	return JAShortFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (int) intAtIndex:(unsigned long)index defaultValue:(int)value
+- (int) ja_intAtIndex:(unsigned long)index defaultValue:(int)value
 {
-	return JAIntFromObject([self objectAtIndexNoThrow:index], value);
+	return JAIntFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (long) longAtIndex:(unsigned long)index defaultValue:(long)value
+- (long) ja_longAtIndex:(unsigned long)index defaultValue:(long)value
 {
-	return JALongFromObject([self objectAtIndexNoThrow:index], value);
+	return JALongFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
-- (long) integerAtIndex:(unsigned long)index defaultValue:(long)value
+- (long) ja_integerAtIndex:(unsigned long)index defaultValue:(long)value
 {
-	return JALongFromObject([self objectAtIndexNoThrow:index], value);
-}
-
-
-- (long long) longLongAtIndex:(unsigned long)index defaultValue:(long long)value
-{
-	return JALongLongFromObject([self objectAtIndexNoThrow:index], value);
+	return JALongFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (unsigned char) unsignedCharAtIndex:(unsigned long)index defaultValue:(unsigned char)value
+- (long long) ja_longLongAtIndex:(unsigned long)index defaultValue:(long long)value
 {
-	return JAUnsignedCharFromObject([self objectAtIndexNoThrow:index], value);
+	return JALongLongFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (unsigned short) unsignedShortAtIndex:(unsigned long)index defaultValue:(unsigned short)value
+- (unsigned char) ja_unsignedCharAtIndex:(unsigned long)index defaultValue:(unsigned char)value
 {
-	return JAUnsignedShortFromObject([self objectAtIndexNoThrow:index], value);
+	return JAUnsignedCharFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (unsigned int) unsignedIntAtIndex:(unsigned long)index defaultValue:(unsigned int)value
+- (unsigned short) ja_unsignedShortAtIndex:(unsigned long)index defaultValue:(unsigned short)value
 {
-	return JAUnsignedIntFromObject([self objectAtIndexNoThrow:index], value);
+	return JAUnsignedShortFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (unsigned long) unsignedLongAtIndex:(unsigned long)index defaultValue:(unsigned long)value
+- (unsigned int) ja_unsignedIntAtIndex:(unsigned long)index defaultValue:(unsigned int)value
 {
-	return JAUnsignedLongFromObject([self objectAtIndexNoThrow:index], value);
+	return JAUnsignedIntFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (unsigned long) unsignedIntegerAtIndex:(unsigned long)index defaultValue:(unsigned long)value
+- (unsigned long) ja_unsignedLongAtIndex:(unsigned long)index defaultValue:(unsigned long)value
 {
-	return JAUnsignedLongFromObject([self objectAtIndexNoThrow:index], value);
+	return JAUnsignedLongFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (unsigned long long) unsignedLongLongAtIndex:(unsigned long)index defaultValue:(unsigned long long)value
+- (unsigned long) ja_unsignedIntegerAtIndex:(unsigned long)index defaultValue:(unsigned long)value
 {
-	return JAUnsignedLongLongFromObject([self objectAtIndexNoThrow:index], value);
+	return JAUnsignedLongFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (BOOL) boolAtIndex:(unsigned long)index defaultValue:(BOOL)value
+- (unsigned long long) ja_unsignedLongLongAtIndex:(unsigned long)index defaultValue:(unsigned long long)value
 {
-	return JABooleanFromObject([self objectAtIndexNoThrow:index], value);
+	return JAUnsignedLongLongFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (float) floatAtIndex:(unsigned long)index defaultValue:(float)value
+- (BOOL) ja_boolAtIndex:(unsigned long)index defaultValue:(BOOL)value
 {
-	return JAFloatFromObject([self objectAtIndexNoThrow:index], value);
+	return JABooleanFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (double) doubleAtIndex:(unsigned long)index defaultValue:(double)value
+- (float) ja_floatAtIndex:(unsigned long)index defaultValue:(float)value
 {
-	return JADoubleFromObject([self objectAtIndexNoThrow:index], value);
+	return JAFloatFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (float) nonNegativeFloatAtIndex:(unsigned long)index defaultValue:(float)value
+- (double) ja_doubleAtIndex:(unsigned long)index defaultValue:(double)value
 {
-	return JANonNegativeFloatFromObject([self objectAtIndexNoThrow:index], value);
+	return JADoubleFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (double) nonNegativeDoubleAtIndex:(unsigned long)index defaultValue:(double)value
+- (float) ja_nonNegativeFloatAtIndex:(unsigned long)index defaultValue:(float)value
 {
-	return JANonNegativeDoubleFromObject([self objectAtIndexNoThrow:index], value);
+	return JANonNegativeFloatFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (id) objectAtIndexNoThrow:(unsigned long)index
+- (double) ja_nonNegativeDoubleAtIndex:(unsigned long)index defaultValue:(double)value
 {
-	return [self objectAtIndexNoThrow:index defaultValue:nil];
+	return JANonNegativeDoubleFromObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (id) objectAtIndexNoThrow:(unsigned long)index defaultValue:(id)value
+- (id) ja_objectAtIndexNoThrow:(unsigned long)index
+{
+	return [self ja_objectAtIndexNoThrow:index defaultValue:nil];
+}
+
+
+- (id) ja_objectAtIndexNoThrow:(unsigned long)index defaultValue:(id)value
 {
 	if ([self count] <= index)  return value;
 	return [self objectAtIndex:index];
 }
 
 
-- (id) objectAtIndex:(unsigned long)index defaultValue:(id)value
+- (id) ja_objectAtIndex:(unsigned long)index defaultValue:(id)value
 {
 	id					objVal = [self objectAtIndex:index];
 	id					result;
@@ -161,9 +161,9 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 }
 
 
-- (id) objectOfClass:(Class)class atIndex:(unsigned long)index defaultValue:(id)value
+- (id) ja_objectOfClass:(Class)class atIndex:(unsigned long)index defaultValue:(id)value
 {
-	id					objVal = [self objectAtIndexNoThrow:index];
+	id					objVal = [self ja_objectAtIndexNoThrow:index];
 	NSString			*result;
 	
 	if ([objVal isKindOfClass:class])  result = objVal;
@@ -173,171 +173,171 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 }
 
 
-- (NSString *) stringAtIndex:(unsigned long)index defaultValue:(NSString *)value
+- (NSString *) ja_stringAtIndex:(unsigned long)index defaultValue:(NSString *)value
 {
-	return StringForObject([self objectAtIndexNoThrow:index], value);
+	return StringForObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (NSArray *) arrayAtIndex:(unsigned long)index defaultValue:(NSArray *)value
+- (NSArray *) ja_arrayAtIndex:(unsigned long)index defaultValue:(NSArray *)value
 {
-	return [self objectOfClass:[NSArray class] atIndex:index defaultValue:value];
+	return [self ja_objectOfClass:[NSArray class] atIndex:index defaultValue:value];
 }
 
 
-- (NSSet *) setAtIndex:(unsigned long)index defaultValue:(NSSet *)value
+- (NSSet *) ja_setAtIndex:(unsigned long)index defaultValue:(NSSet *)value
 {
-	return SetForObject([self objectAtIndexNoThrow:index], value);
+	return SetForObject([self ja_objectAtIndexNoThrow:index], value);
 }
 
 
-- (NSDictionary *) dictionaryAtIndex:(unsigned long)index defaultValue:(NSDictionary *)value
+- (NSDictionary *) ja_dictionaryAtIndex:(unsigned long)index defaultValue:(NSDictionary *)value
 {
-	return [self objectOfClass:[NSDictionary class] atIndex:index defaultValue:value];
+	return [self ja_objectOfClass:[NSDictionary class] atIndex:index defaultValue:value];
 }
 
 
-- (NSData *) dataAtIndex:(unsigned long)index defaultValue:(NSData *)value
+- (NSData *) ja_dataAtIndex:(unsigned long)index defaultValue:(NSData *)value
 {
-	return [self objectOfClass:[NSData class] atIndex:index defaultValue:value];
+	return [self ja_objectOfClass:[NSData class] atIndex:index defaultValue:value];
 }
 
 
-- (char) charAtIndex:(unsigned long)index
+- (char) ja_charAtIndex:(unsigned long)index
 {
-	return [self charAtIndex:index defaultValue:0];
+	return [self ja_charAtIndex:index defaultValue:0];
 }
 
 
-- (short) shortAtIndex:(unsigned long)index
+- (short) ja_shortAtIndex:(unsigned long)index
 {
-	return [self shortAtIndex:index defaultValue:0];
+	return [self ja_shortAtIndex:index defaultValue:0];
 }
 
 
-- (int) intAtIndex:(unsigned long)index
+- (int) ja_intAtIndex:(unsigned long)index
 {
-	return [self intAtIndex:index defaultValue:0];
+	return [self ja_intAtIndex:index defaultValue:0];
 }
 
 
-- (long) longAtIndex:(unsigned long)index
+- (long) ja_longAtIndex:(unsigned long)index
 {
-	return [self longAtIndex:index defaultValue:0];
+	return [self ja_longAtIndex:index defaultValue:0];
 }
 
 
-- (long) integerAtIndex:(unsigned long)index
+- (long) ja_integerAtIndex:(unsigned long)index
 {
-	return [self integerAtIndex:index defaultValue:0];
+	return [self ja_integerAtIndex:index defaultValue:0];
 }
 
 
-- (long long) longLongAtIndex:(unsigned long)index
+- (long long) ja_longLongAtIndex:(unsigned long)index
 {
-	return [self longLongAtIndex:index defaultValue:0];
+	return [self ja_longLongAtIndex:index defaultValue:0];
 }
 
 
-- (unsigned char) unsignedCharAtIndex:(unsigned long)index
+- (unsigned char) ja_unsignedCharAtIndex:(unsigned long)index
 {
-	return [self unsignedCharAtIndex:index defaultValue:0];
+	return [self ja_unsignedCharAtIndex:index defaultValue:0];
 }
 
 
-- (unsigned short) unsignedShortAtIndex:(unsigned long)index
+- (unsigned short) ja_unsignedShortAtIndex:(unsigned long)index
 {
-	return [self unsignedShortAtIndex:index defaultValue:0];
+	return [self ja_unsignedShortAtIndex:index defaultValue:0];
 }
 
 
-- (unsigned int) unsignedIntAtIndex:(unsigned long)index
+- (unsigned int) ja_unsignedIntAtIndex:(unsigned long)index
 {
-	return [self unsignedIntAtIndex:index defaultValue:0];
+	return [self ja_unsignedIntAtIndex:index defaultValue:0];
 }
 
 
-- (unsigned long) unsignedLongAtIndex:(unsigned long)index
+- (unsigned long) ja_unsignedLongAtIndex:(unsigned long)index
 {
-	return [self unsignedLongAtIndex:index defaultValue:0];
+	return [self ja_unsignedLongAtIndex:index defaultValue:0];
 }
 
 
-- (unsigned long) unsignedIntegerAtIndex:(unsigned long)index
+- (unsigned long) ja_unsignedIntegerAtIndex:(unsigned long)index
 {
-	return [self unsignedIntegerAtIndex:index defaultValue:0];
+	return [self ja_unsignedIntegerAtIndex:index defaultValue:0];
 }
 
 
-- (unsigned long long) unsignedLongLongAtIndex:(unsigned long)index
+- (unsigned long long) ja_unsignedLongLongAtIndex:(unsigned long)index
 {
-	return [self unsignedLongLongAtIndex:index defaultValue:0];
+	return [self ja_unsignedLongLongAtIndex:index defaultValue:0];
 }
 
 
-- (BOOL) boolAtIndex:(unsigned long)index
+- (BOOL) ja_boolAtIndex:(unsigned long)index
 {
-	return [self boolAtIndex:index defaultValue:NO];
+	return [self ja_boolAtIndex:index defaultValue:NO];
 }
 
 
-- (float) floatAtIndex:(unsigned long)index
+- (float) ja_floatAtIndex:(unsigned long)index
 {
-	return JAFloatFromObject([self objectAtIndexNoThrow:index], 0.0f);
+	return JAFloatFromObject([self ja_objectAtIndexNoThrow:index], 0.0f);
 }
 
 
-- (double) doubleAtIndex:(unsigned long)index
+- (double) ja_doubleAtIndex:(unsigned long)index
 {
-	return JADoubleFromObject([self objectAtIndexNoThrow:index], 0.0);
+	return JADoubleFromObject([self ja_objectAtIndexNoThrow:index], 0.0);
 }
 
 
-- (float) nonNegativeFloatAtIndex:(unsigned long)index
+- (float) ja_nonNegativeFloatAtIndex:(unsigned long)index
 {
-	return JANonNegativeFloatFromObject([self objectAtIndexNoThrow:index], 0.0f);
+	return JANonNegativeFloatFromObject([self ja_objectAtIndexNoThrow:index], 0.0f);
 }
 
 
-- (double) nonNegativeDoubleAtIndex:(unsigned long)index
+- (double) ja_nonNegativeDoubleAtIndex:(unsigned long)index
 {
-	return JANonNegativeDoubleFromObject([self objectAtIndexNoThrow:index], 0.0);
+	return JANonNegativeDoubleFromObject([self ja_objectAtIndexNoThrow:index], 0.0);
 }
 
 
-- (id) objectOfClass:(Class)class atIndex:(unsigned long)index
+- (id) ja_objectOfClass:(Class)class atIndex:(unsigned long)index
 {
-	return [self objectOfClass:class atIndex:index defaultValue:nil];
+	return [self ja_objectOfClass:class atIndex:index defaultValue:nil];
 }
 
 
-- (NSString *) stringAtIndex:(unsigned long)index
+- (NSString *) ja_stringAtIndex:(unsigned long)index
 {
-	return [self stringAtIndex:index defaultValue:nil];
+	return [self ja_stringAtIndex:index defaultValue:nil];
 }
 
 
-- (NSArray *) arrayAtIndex:(unsigned long)index
+- (NSArray *) ja_arrayAtIndex:(unsigned long)index
 {
-	return [self arrayAtIndex:index defaultValue:nil];
+	return [self ja_arrayAtIndex:index defaultValue:nil];
 }
 
 
-- (NSSet *) setAtIndex:(unsigned long)index
+- (NSSet *) ja_setAtIndex:(unsigned long)index
 {
-	return [self setAtIndex:index defaultValue:nil];
+	return [self ja_setAtIndex:index defaultValue:nil];
 }
 
 
-- (NSDictionary *) dictionaryAtIndex:(unsigned long)index
+- (NSDictionary *) ja_dictionaryAtIndex:(unsigned long)index
 {
-	return [self dictionaryAtIndex:index defaultValue:nil];
+	return [self ja_dictionaryAtIndex:index defaultValue:nil];
 }
 
 
-- (NSData *) dataAtIndex:(unsigned long)index
+- (NSData *) ja_dataAtIndex:(unsigned long)index
 {
-	return [self dataAtIndex:index defaultValue:nil];
+	return [self ja_dataAtIndex:index defaultValue:nil];
 }
 
 @end
@@ -345,109 +345,109 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 
 @implementation NSDictionary (JAPropertyListAccessors)
 
-- (char) charForKey:(id)key defaultValue:(char)value
+- (char) ja_charForKey:(id)key defaultValue:(char)value
 {
 	return JACharFromObject([self objectForKey:key], value);
 }
 
 
-- (short) shortForKey:(id)key defaultValue:(short)value
+- (short) ja_shortForKey:(id)key defaultValue:(short)value
 {
 	return JAShortFromObject([self objectForKey:key], value);
 }
 
 
-- (int) intForKey:(id)key defaultValue:(int)value
+- (int) ja_intForKey:(id)key defaultValue:(int)value
 {
 	return JAIntFromObject([self objectForKey:key], value);
 }
 
 
-- (long) longForKey:(id)key defaultValue:(long)value
+- (long) ja_longForKey:(id)key defaultValue:(long)value
 {
 	return JALongFromObject([self objectForKey:key], value);
 }
 
 
-- (long) integerForKey:(id)key defaultValue:(long)value
+- (long) ja_integerForKey:(id)key defaultValue:(long)value
 {
 	return JALongFromObject([self objectForKey:key], value);
 }
 
 
-- (long long) longLongForKey:(id)key defaultValue:(long long)value
+- (long long) ja_longLongForKey:(id)key defaultValue:(long long)value
 {
 	return JALongLongFromObject([self objectForKey:key], value);
 }
 
 
-- (unsigned char) unsignedCharForKey:(id)key defaultValue:(unsigned char)value
+- (unsigned char) ja_unsignedCharForKey:(id)key defaultValue:(unsigned char)value
 {
 	return JAUnsignedCharFromObject([self objectForKey:key], value);
 }
 
 
-- (unsigned short) unsignedShortForKey:(id)key defaultValue:(unsigned short)value
+- (unsigned short) ja_unsignedShortForKey:(id)key defaultValue:(unsigned short)value
 {
 	return JAUnsignedShortFromObject([self objectForKey:key], value);
 }
 
 
-- (unsigned int) unsignedIntForKey:(id)key defaultValue:(unsigned int)value
+- (unsigned int) ja_unsignedIntForKey:(id)key defaultValue:(unsigned int)value
 {
 	return JAUnsignedIntFromObject([self objectForKey:key], value);
 }
 
 
-- (unsigned long) unsignedLongForKey:(id)key defaultValue:(unsigned long)value
+- (unsigned long) ja_unsignedLongForKey:(id)key defaultValue:(unsigned long)value
 {
 	return JAUnsignedLongFromObject([self objectForKey:key], value);
 }
 
 
-- (unsigned long) unsignedIntegerForKey:(id)key defaultValue:(unsigned long)value
+- (unsigned long) ja_unsignedIntegerForKey:(id)key defaultValue:(unsigned long)value
 {
 	return JAUnsignedLongFromObject([self objectForKey:key], value);
 }
 
 
-- (unsigned long long) unsignedLongLongForKey:(id)key defaultValue:(unsigned long long)value
+- (unsigned long long) ja_unsignedLongLongForKey:(id)key defaultValue:(unsigned long long)value
 {
 	return JAUnsignedLongLongFromObject([self objectForKey:key], value);
 }
 
 
-- (BOOL) boolForKey:(id)key defaultValue:(BOOL)value
+- (BOOL) ja_boolForKey:(id)key defaultValue:(BOOL)value
 {
 	return JABooleanFromObject([self objectForKey:key], value);
 }
 
 
-- (float) floatForKey:(id)key defaultValue:(float)value
+- (float) ja_floatForKey:(id)key defaultValue:(float)value
 {
 	return JAFloatFromObject([self objectForKey:key], value);
 }
 
 
-- (double) doubleForKey:(id)key defaultValue:(double)value
+- (double) ja_doubleForKey:(id)key defaultValue:(double)value
 {
 	return JADoubleFromObject([self objectForKey:key], value);
 }
 
 
-- (float) nonNegativeFloatForKey:(id)key defaultValue:(float)value
+- (float) ja_nonNegativeFloatForKey:(id)key defaultValue:(float)value
 {
 	return JANonNegativeFloatFromObject([self objectForKey:key], value);
 }
 
 
-- (double) nonNegativeDoubleForKey:(id)key defaultValue:(double)value
+- (double) ja_nonNegativeDoubleForKey:(id)key defaultValue:(double)value
 {
 	return JANonNegativeDoubleFromObject([self objectForKey:key], value);
 }
 
 
-- (id) objectForKey:(id)key defaultValue:(id)value
+- (id) ja_objectForKey:(id)key defaultValue:(id)value
 {
 	id					objVal = [self objectForKey:key];
 	id					result;
@@ -459,7 +459,7 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 }
 
 
-- (id) objectOfClass:(Class)class forKey:(id)key defaultValue:(id)value
+- (id) ja_objectOfClass:(Class)class forKey:(id)key defaultValue:(id)value
 {
 	id					objVal = [self objectForKey:key];
 	id					result;
@@ -471,171 +471,171 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 }
 
 
-- (NSString *) stringForKey:(id)key defaultValue:(NSString *)value
+- (NSString *) ja_stringForKey:(id)key defaultValue:(NSString *)value
 {
 	return StringForObject([self objectForKey:key], value);
 }
 
 
-- (NSArray *) arrayForKey:(id)key defaultValue:(NSArray *)value
+- (NSArray *) ja_arrayForKey:(id)key defaultValue:(NSArray *)value
 {
-	return [self objectOfClass:[NSArray class] forKey:key defaultValue:value];
+	return [self ja_objectOfClass:[NSArray class] forKey:key defaultValue:value];
 }
 
 
-- (NSSet *) setForKey:(id)key defaultValue:(NSSet *)value
+- (NSSet *) ja_setForKey:(id)key defaultValue:(NSSet *)value
 {
 	return SetForObject([self objectForKey:key], value);
 }
 
 
-- (NSDictionary *) dictionaryForKey:(id)key defaultValue:(NSDictionary *)value
+- (NSDictionary *) ja_dictionaryForKey:(id)key defaultValue:(NSDictionary *)value
 {
-	return [self objectOfClass:[NSDictionary class] forKey:key defaultValue:value];
+	return [self ja_objectOfClass:[NSDictionary class] forKey:key defaultValue:value];
 }
 
 
-- (NSData *) dataForKey:(id)key defaultValue:(NSData *)value
+- (NSData *) ja_dataForKey:(id)key defaultValue:(NSData *)value
 {
-	return [self objectOfClass:[NSData class] forKey:key defaultValue:value];
+	return [self ja_objectOfClass:[NSData class] forKey:key defaultValue:value];
 }
 
 
-- (char) charForKey:(id)key
+- (char) ja_charForKey:(id)key
 {
-	return [self charForKey:key defaultValue:0];
+	return [self ja_charForKey:key defaultValue:0];
 }
 
 
-- (short) shortForKey:(id)key
+- (short) ja_shortForKey:(id)key
 {
-	return [self shortForKey:key defaultValue:0];
+	return [self ja_shortForKey:key defaultValue:0];
 }
 
 
-- (int) intForKey:(id)key
+- (int) ja_intForKey:(id)key
 {
-	return [self intForKey:key defaultValue:0];
+	return [self ja_intForKey:key defaultValue:0];
 }
 
 
-- (long) longForKey:(id)key
+- (long) ja_longForKey:(id)key
 {
-	return [self longForKey:key defaultValue:0];
+	return [self ja_longForKey:key defaultValue:0];
 }
 
 
-- (long) integerForKey:(id)key
+- (long) ja_integerForKey:(id)key
 {
-	return [self integerForKey:key defaultValue:0];
+	return [self ja_integerForKey:key defaultValue:0];
 }
 
 
-- (long long) longLongForKey:(id)key
+- (long long) ja_longLongForKey:(id)key
 {
-	return [self longLongForKey:key defaultValue:0];
+	return [self ja_longLongForKey:key defaultValue:0];
 }
 
 
-- (unsigned char) unsignedCharForKey:(id)key
+- (unsigned char) ja_unsignedCharForKey:(id)key
 {
-	return [self unsignedCharForKey:key defaultValue:0];
+	return [self ja_unsignedCharForKey:key defaultValue:0];
 }
 
 
-- (unsigned short) unsignedShortForKey:(id)key
+- (unsigned short) ja_unsignedShortForKey:(id)key
 {
-	return [self unsignedShortForKey:key defaultValue:0];
+	return [self ja_unsignedShortForKey:key defaultValue:0];
 }
 
 
-- (unsigned int) unsignedIntForKey:(id)key
+- (unsigned int) ja_unsignedIntForKey:(id)key
 {
-	return [self unsignedIntForKey:key defaultValue:0];
+	return [self ja_unsignedIntForKey:key defaultValue:0];
 }
 
 
-- (unsigned long) unsignedLongForKey:(id)key
+- (unsigned long) ja_unsignedLongForKey:(id)key
 {
-	return [self unsignedLongForKey:key defaultValue:0];
+	return [self ja_unsignedLongForKey:key defaultValue:0];
 }
 
 
-- (unsigned long) unsignedIntegerForKey:(id)key
+- (unsigned long) ja_unsignedIntegerForKey:(id)key
 {
-	return [self unsignedIntegerForKey:key defaultValue:0];
+	return [self ja_unsignedIntegerForKey:key defaultValue:0];
 }
 
 
-- (unsigned long long) unsignedLongLongForKey:(id)key
+- (unsigned long long) ja_unsignedLongLongForKey:(id)key
 {
-	return [self unsignedLongLongForKey:key defaultValue:0];
+	return [self ja_unsignedLongLongForKey:key defaultValue:0];
 }
 
 
-- (BOOL) boolForKey:(id)key
+- (BOOL) ja_boolForKey:(id)key
 {
-	return [self boolForKey:key defaultValue:NO];
+	return [self ja_boolForKey:key defaultValue:NO];
 }
 
 
-- (float) floatForKey:(id)key
+- (float) ja_floatForKey:(id)key
 {
 	return JAFloatFromObject([self objectForKey:key], 0.0f);
 }
 
 
-- (double) doubleForKey:(id)key
+- (double) ja_doubleForKey:(id)key
 {
 	return JADoubleFromObject([self objectForKey:key], 0.0);
 }
 
 
-- (float) nonNegativeFloatForKey:(id)key
+- (float) ja_nonNegativeFloatForKey:(id)key
 {
 	return JANonNegativeFloatFromObject([self objectForKey:key], 0.0f);
 }
 
 
-- (double) nonNegativeDoubleForKey:(id)key
+- (double) ja_nonNegativeDoubleForKey:(id)key
 {
 	return JANonNegativeDoubleFromObject([self objectForKey:key], 0.0);
 }
 
 
-- (id) objectOfClass:(Class)class forKey:(id)key
+- (id) ja_objectOfClass:(Class)class forKey:(id)key
 {
-	return [self objectOfClass:class forKey:key defaultValue:nil];
+	return [self ja_objectOfClass:class forKey:key defaultValue:nil];
 }
 
 
-- (NSString *) stringForKey:(id)key
+- (NSString *) ja_stringForKey:(id)key
 {
-	return [self stringForKey:key defaultValue:nil];
+	return [self ja_stringForKey:key defaultValue:nil];
 }
 
 
-- (NSArray *) arrayForKey:(id)key
+- (NSArray *) ja_arrayForKey:(id)key
 {
-	return [self arrayForKey:key defaultValue:nil];
+	return [self ja_arrayForKey:key defaultValue:nil];
 }
 
 
-- (NSSet *) setForKey:(id)key
+- (NSSet *) ja_setForKey:(id)key
 {
-	return [self setForKey:key defaultValue:nil];
+	return [self ja_setForKey:key defaultValue:nil];
 }
 
 
-- (NSDictionary *) dictionaryForKey:(id)key
+- (NSDictionary *) ja_dictionaryForKey:(id)key
 {
-	return [self dictionaryForKey:key defaultValue:nil];
+	return [self ja_dictionaryForKey:key defaultValue:nil];
 }
 
 
-- (NSData *) dataForKey:(id)key
+- (NSData *) ja_dataForKey:(id)key
 {
-	return [self dataForKey:key defaultValue:nil];
+	return [self ja_dataForKey:key defaultValue:nil];
 }
 
 @end
@@ -643,109 +643,109 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 
 @implementation NSUserDefaults (JAPropertyListAccessors)
 
-- (char) charForKey:(id)key defaultValue:(char)value
+- (char) ja_charForKey:(NSString *)key defaultValue:(char)value
 {
 	return JACharFromObject([self objectForKey:key], value);
 }
 
 
-- (short) shortForKey:(id)key defaultValue:(short)value
+- (short) ja_shortForKey:(NSString *)key defaultValue:(short)value
 {
 	return JAShortFromObject([self objectForKey:key], value);
 }
 
 
-- (int) intForKey:(id)key defaultValue:(int)value
+- (int) ja_intForKey:(NSString *)key defaultValue:(int)value
 {
 	return JAIntFromObject([self objectForKey:key], value);
 }
 
 
-- (long) longForKey:(id)key defaultValue:(long)value
+- (long) ja_longForKey:(NSString *)key defaultValue:(long)value
 {
 	return JALongFromObject([self objectForKey:key], value);
 }
 
 
-- (long) integerForKey:(id)key defaultValue:(long)value
+- (long) ja_integerForKey:(NSString *)key defaultValue:(long)value
 {
 	return JALongFromObject([self objectForKey:key], value);
 }
 
 
-- (long long) longLongForKey:(id)key defaultValue:(long long)value
+- (long long) ja_longLongForKey:(NSString *)key defaultValue:(long long)value
 {
 	return JALongLongFromObject([self objectForKey:key], value);
 }
 
 
-- (unsigned char) unsignedCharForKey:(id)key defaultValue:(unsigned char)value
+- (unsigned char) ja_unsignedCharForKey:(NSString *)key defaultValue:(unsigned char)value
 {
 	return JAUnsignedCharFromObject([self objectForKey:key], value);
 }
 
 
-- (unsigned short) unsignedShortForKey:(id)key defaultValue:(unsigned short)value
+- (unsigned short) ja_unsignedShortForKey:(NSString *)key defaultValue:(unsigned short)value
 {
 	return JAUnsignedShortFromObject([self objectForKey:key], value);
 }
 
 
-- (unsigned int) unsignedIntForKey:(id)key defaultValue:(unsigned int)value
+- (unsigned int) ja_unsignedIntForKey:(NSString *)key defaultValue:(unsigned int)value
 {
 	return JAUnsignedIntFromObject([self objectForKey:key], value);
 }
 
 
-- (unsigned long) unsignedLongForKey:(id)key defaultValue:(unsigned long)value
+- (unsigned long) ja_unsignedLongForKey:(NSString *)key defaultValue:(unsigned long)value
 {
 	return JAUnsignedLongFromObject([self objectForKey:key], value);
 }
 
 
-- (unsigned long) unsignedIntegerForKey:(id)key defaultValue:(unsigned long)value
+- (unsigned long) ja_unsignedIntegerForKey:(NSString *)key defaultValue:(unsigned long)value
 {
 	return JAUnsignedLongFromObject([self objectForKey:key], value);
 }
 
 
-- (unsigned long long) unsignedLongLongForKey:(id)key defaultValue:(unsigned long long)value
+- (unsigned long long) ja_unsignedLongLongForKey:(NSString *)key defaultValue:(unsigned long long)value
 {
 	return JAUnsignedLongLongFromObject([self objectForKey:key], value);
 }
 
 
-- (BOOL) boolForKey:(id)key defaultValue:(BOOL)value
+- (BOOL) ja_boolForKey:(NSString *)key defaultValue:(BOOL)value
 {
 	return JABooleanFromObject([self objectForKey:key], value);
 }
 
 
-- (float) floatForKey:(id)key defaultValue:(float)value
+- (float) ja_floatForKey:(NSString *)key defaultValue:(float)value
 {
 	return JAFloatFromObject([self objectForKey:key], value);
 }
 
 
-- (double) doubleForKey:(id)key defaultValue:(double)value
+- (double) ja_doubleForKey:(NSString *)key defaultValue:(double)value
 {
 	return JADoubleFromObject([self objectForKey:key], value);
 }
 
 
-- (float) nonNegativeFloatForKey:(id)key defaultValue:(float)value
+- (float) ja_nonNegativeFloatForKey:(NSString *)key defaultValue:(float)value
 {
 	return JANonNegativeFloatFromObject([self objectForKey:key], value);
 }
 
 
-- (double) nonNegativeDoubleForKey:(id)key defaultValue:(double)value
+- (double) ja_nonNegativeDoubleForKey:(NSString *)key defaultValue:(double)value
 {
 	return JANonNegativeDoubleFromObject([self objectForKey:key], value);
 }
 
 
-- (id) objectForKey:(id)key defaultValue:(id)value
+- (id) ja_objectForKey:(NSString *)key defaultValue:(id)value
 {
 	id					objVal = [self objectForKey:key];
 	id					result;
@@ -757,7 +757,7 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 }
 
 
-- (id) objectOfClass:(Class)class forKey:(id)key defaultValue:(id)value
+- (id) ja_objectOfClass:(Class)class forKey:(NSString *)key defaultValue:(id)value
 {
 	id					objVal = [self objectForKey:key];
 	id					result;
@@ -769,123 +769,135 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 }
 
 
-- (NSString *) stringForKey:(id)key defaultValue:(NSString *)value
+- (NSString *) ja_stringForKey:(NSString *)key defaultValue:(NSString *)value
 {
 	return StringForObject([self objectForKey:key], value);
 }
 
 
-- (NSArray *) arrayForKey:(id)key defaultValue:(NSArray *)value
+- (NSArray *) ja_arrayForKey:(NSString *)key defaultValue:(NSArray *)value
 {
-	return [self objectOfClass:[NSArray class] forKey:key defaultValue:value];
+	return [self ja_objectOfClass:[NSArray class] forKey:key defaultValue:value];
 }
 
 
-- (NSSet *) setForKey:(id)key defaultValue:(NSSet *)value
+- (NSSet *) ja_setForKey:(NSString *)key defaultValue:(NSSet *)value
 {
 	return SetForObject([self objectForKey:key], value);
 }
 
 
-- (NSDictionary *) dictionaryForKey:(id)key defaultValue:(NSDictionary *)value
+- (NSDictionary *) ja_dictionaryForKey:(NSString *)key defaultValue:(NSDictionary *)value
 {
-	return [self objectOfClass:[NSDictionary class] forKey:key defaultValue:value];
+	return [self ja_objectOfClass:[NSDictionary class] forKey:key defaultValue:value];
 }
 
 
-- (NSData *) dataForKey:(id)key defaultValue:(NSData *)value
+- (NSData *) ja_dataForKey:(NSString *)key defaultValue:(NSData *)value
 {
-	return [self objectOfClass:[NSData class] forKey:key defaultValue:value];
+	return [self ja_objectOfClass:[NSData class] forKey:key defaultValue:value];
 }
 
 
-- (char) charForKey:(id)key
+- (char) ja_charForKey:(NSString *)key
 {
-	return [self charForKey:key defaultValue:0];
+	return [self ja_charForKey:key defaultValue:0];
 }
 
 
-- (short) shortForKey:(id)key
+- (short) ja_shortForKey:(NSString *)key
 {
-	return [self shortForKey:key defaultValue:0];
+	return [self ja_shortForKey:key defaultValue:0];
 }
 
 
-- (int) intForKey:(id)key
+- (int) ja_intForKey:(NSString *)key
 {
-	return [self intForKey:key defaultValue:0];
+	return [self ja_intForKey:key defaultValue:0];
 }
 
 
-- (long) longForKey:(id)key
+- (long) ja_longForKey:(NSString *)key
 {
-	return [self longForKey:key defaultValue:0];
+	return [self ja_longForKey:key defaultValue:0];
 }
 
 
-- (long long) longLongForKey:(id)key
+- (long long) ja_longLongForKey:(NSString *)key
 {
-	return [self longLongForKey:key defaultValue:0];
+	return [self ja_longLongForKey:key defaultValue:0];
 }
 
 
-- (unsigned char) unsignedCharForKey:(id)key
+- (unsigned char) ja_unsignedCharForKey:(NSString *)key
 {
-	return [self unsignedCharForKey:key defaultValue:0];
+	return [self ja_unsignedCharForKey:key defaultValue:0];
 }
 
 
-- (unsigned short) unsignedShortForKey:(id)key
+- (unsigned short) ja_unsignedShortForKey:(NSString *)key
 {
-	return [self unsignedShortForKey:key defaultValue:0];
+	return [self ja_unsignedShortForKey:key defaultValue:0];
 }
 
 
-- (unsigned int) unsignedIntForKey:(id)key
+- (unsigned int) ja_unsignedIntForKey:(NSString *)key
 {
-	return [self unsignedIntForKey:key defaultValue:0];
+	return [self ja_unsignedIntForKey:key defaultValue:0];
 }
 
 
-- (unsigned long) unsignedLongForKey:(id)key
+- (unsigned long) ja_unsignedLongForKey:(NSString *)key
 {
-	return [self unsignedLongForKey:key defaultValue:0];
+	return [self ja_unsignedLongForKey:key defaultValue:0];
 }
 
 
-- (unsigned long) unsignedIntegerForKey:(id)key
+- (long) ja_integerForKey:(NSString *)key
 {
-	return [self unsignedIntegerForKey:key defaultValue:0];
+	return [self ja_integerForKey:key defaultValue:0];
 }
 
 
-- (unsigned long long) unsignedLongLongForKey:(id)key
+- (unsigned long) ja_unsignedIntegerForKey:(NSString *)key
 {
-	return [self unsignedLongLongForKey:key defaultValue:0];
+	return [self ja_unsignedIntegerForKey:key defaultValue:0];
 }
 
 
-- (float) nonNegativeFloatForKey:(id)key
+- (BOOL) ja_boolForKey:(NSString *)key
+{
+	return [self ja_boolForKey:key defaultValue:NO];
+}
+
+
+- (unsigned long long) ja_unsignedLongLongForKey:(NSString *)key
+{
+	return [self ja_unsignedLongLongForKey:key defaultValue:0];
+}
+
+
+- (float) ja_nonNegativeFloatForKey:(NSString *)key
 {
 	return JANonNegativeFloatFromObject([self objectForKey:key], 0.0f);
 }
 
 
-- (double) nonNegativeDoubleForKey:(id)key
+- (double) ja_nonNegativeDoubleForKey:(NSString *)key
 {
 	return JANonNegativeDoubleFromObject([self objectForKey:key], 0.0);
 }
 
 
-- (id) objectOfClass:(Class)class forKey:(id)key
+- (id) ja_objectOfClass:(Class)class forKey:(NSString *)key
 {
-	return [self objectOfClass:class forKey:key defaultValue:nil];
+	return [self ja_objectOfClass:class forKey:key defaultValue:nil];
 }
 
 
-- (NSSet *) setForKey:(id)key
+- (NSSet *) ja_setForKey:(NSString *)key
 {
-	return [self setForKey:key defaultValue:nil];
+	return [self ja_setForKey:key defaultValue:nil];
 }
 
 @end
@@ -893,49 +905,49 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 
 @implementation NSMutableArray (OOInserter)
 
-- (void) addInteger:(long)value
+- (void) ja_addInteger:(long)value
 {
 	[self addObject:[NSNumber numberWithLong:value]];
 }
 
 
-- (void) addUnsignedInteger:(unsigned long)value
+- (void) ja_addUnsignedInteger:(unsigned long)value
 {
 	[self addObject:[NSNumber numberWithUnsignedLong:value]];
 }
 
 
-- (void) addFloat:(double)value
+- (void) ja_addFloat:(double)value
 {
 	[self addObject:[NSNumber numberWithDouble:value]];
 }
 
 
-- (void) addBool:(BOOL)value
+- (void) ja_addBool:(BOOL)value
 {
 	[self addObject:[NSNumber numberWithBool:value]];
 }
 
 
-- (void) insertInteger:(long)value atIndex:(unsigned long)index
+- (void) ja_insertInteger:(long)value atIndex:(unsigned long)index
 {
 	[self insertObject:[NSNumber numberWithLong:value] atIndex:index];
 }
 
 
-- (void) insertUnsignedInteger:(unsigned long)value atIndex:(unsigned long)index;
+- (void) ja_insertUnsignedInteger:(unsigned long)value atIndex:(unsigned long)index;
 {
 	[self insertObject:[NSNumber numberWithUnsignedLong:value] atIndex:index];
 }
 
 
-- (void) insertFloat:(double)value atIndex:(unsigned long)index
+- (void) ja_insertFloat:(double)value atIndex:(unsigned long)index
 {
 	[self insertObject:[NSNumber numberWithDouble:value] atIndex:index];
 }
 
 
-- (void) insertBool:(BOOL)value atIndex:(unsigned long)index
+- (void) ja_insertBool:(BOOL)value atIndex:(unsigned long)index
 {
 	[self insertObject:[NSNumber numberWithBool:value] atIndex:index];
 }
@@ -945,37 +957,37 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 
 @implementation NSMutableDictionary (OOInserter)
 
-- (void) setInteger:(long)value forKey:(id)key
+- (void) ja_setInteger:(long)value forKey:(id)key
 {
 	[self setObject:[NSNumber numberWithLong:value] forKey:key];
 }
 
 
-- (void) setUnsignedInteger:(unsigned long)value forKey:(id)key
+- (void) ja_setUnsignedInteger:(unsigned long)value forKey:(id)key
 {
 	[self setObject:[NSNumber numberWithUnsignedLong:value] forKey:key];
 }
 
 
-- (void) setLongLong:(long long)value forKey:(id)key
+- (void) ja_setLongLong:(long long)value forKey:(id)key
 {
 	[self setObject:[NSNumber numberWithLongLong:value] forKey:key];
 }
 
 
-- (void) setUnsignedLongLong:(unsigned long long)value forKey:(id)key
+- (void) ja_setUnsignedLongLong:(unsigned long long)value forKey:(id)key
 {
 	[self setObject:[NSNumber numberWithUnsignedLongLong:value] forKey:key];
 }
 
 
-- (void) setFloat:(double)value forKey:(id)key
+- (void) ja_setFloat:(double)value forKey:(id)key
 {
 	[self setObject:[NSNumber numberWithDouble:value] forKey:key];
 }
 
 
-- (void) setBool:(BOOL)value forKey:(id)key
+- (void) ja_setBool:(BOOL)value forKey:(id)key
 {
 	[self setObject:[NSNumber numberWithBool:value] forKey:key];
 }
@@ -985,25 +997,25 @@ static NSString *StringForObject(id object, NSString *defaultValue);
 
 @implementation NSMutableSet (OOInserter)
 
-- (void) addInteger:(long)value
+- (void) ja_addInteger:(long)value
 {
 	[self addObject:[NSNumber numberWithLong:value]];
 }
 
 
-- (void) addUnsignedInteger:(unsigned long)value
+- (void) ja_addUnsignedInteger:(unsigned long)value
 {
 	[self addObject:[NSNumber numberWithUnsignedLong:value]];
 }
 
 
-- (void) addFloat:(double)value
+- (void) ja_addFloat:(double)value
 {
 	[self addObject:[NSNumber numberWithDouble:value]];
 }
 
 
-- (void) addBool:(BOOL)value
+- (void) ja_addBool:(BOOL)value
 {
 	[self addObject:[NSNumber numberWithBool:value]];
 }

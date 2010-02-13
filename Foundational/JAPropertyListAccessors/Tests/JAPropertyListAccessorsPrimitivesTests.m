@@ -167,12 +167,12 @@ SOFTWARE.
 - (void) testStringConversion
 {
 	// Tests internal function StringForObject(). (Four leaks for convenience)
-	STAssertNotNil([[NSArray arrayWithObject:@"Test string"] stringAtIndex:0], @"string to string conversion failed");
-	STAssertNotNil([[NSArray arrayWithObject:[NSNumber numberWithInt:42]] stringAtIndex:0], @"number to string conversion failed");
-	STAssertNotNil([[NSArray arrayWithObject:[NSDate date]] stringAtIndex:0], @"date to string conversion failed");
-	STAssertNotNil([[NSArray arrayWithObject:[StringValueTester new]] stringAtIndex:0], @"custom object to string conversion failed");
-	STAssertNil([[NSArray arrayWithObject:[BadStringValueTester new]] stringAtIndex:0], @"custom object to string non-conversion failed");
-	STAssertNotNil([[NSArray arrayWithObject:[NSObject new]] stringAtIndex:0 defaultValue:@"default"], @"string conversion default fallback failed");
+	STAssertNotNil([[NSArray arrayWithObject:@"Test string"] ja_stringAtIndex:0], @"string to string conversion failed");
+	STAssertNotNil([[NSArray arrayWithObject:[NSNumber numberWithInt:42]] ja_stringAtIndex:0], @"number to string conversion failed");
+	STAssertNotNil([[NSArray arrayWithObject:[NSDate date]] ja_stringAtIndex:0], @"date to string conversion failed");
+	STAssertNotNil([[NSArray arrayWithObject:[StringValueTester new]] ja_stringAtIndex:0], @"custom object to string conversion failed");
+	STAssertNil([[NSArray arrayWithObject:[BadStringValueTester new]] ja_stringAtIndex:0], @"custom object to string non-conversion failed");
+	STAssertNotNil([[NSArray arrayWithObject:[NSObject new]] ja_stringAtIndex:0 defaultValue:@"default"], @"string conversion default fallback failed");
 }
 
 

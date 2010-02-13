@@ -1,7 +1,7 @@
 /*
 
 JAPropertyListAccessors.h
-Version 1.0.2
+Version 1.1
 
 Convenience accessors for NSArray, NSDictionary and NSUserDefaults.
 In addition to being convenient, these perform type checking. Which is,
@@ -40,6 +40,10 @@ behaviour for arbitrary objects.
 
 
 CHANGE LOG
+	1.1			Added ja_ prefix to all methods. Unprefixed category methods
+				on framework classes are bad - and in this case caused at
+				least one crashing conflict with a third-party input manager
+				hack.
 	1.0.2		Objective-C++ compatible.
 	1.0.1		Default value (rather than nil) is now returned when
 				conversion to string fails.
@@ -47,7 +51,7 @@ CHANGE LOG
 	1.0			Initial release.
 
 
-Copyright © 2007–2008 Jens Ayton
+Copyright © 2007–20010 Jens Ayton
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the “Software”), to deal
@@ -77,73 +81,73 @@ SOFTWARE.
 @interface NSArray (JAPropertyListAccessors)
 
 // Basic integer and boolean accessors; default 0/NO
-- (long) integerAtIndex:(unsigned long)index;
-- (unsigned long) unsignedIntegerAtIndex:(unsigned long)index;
-- (BOOL) boolAtIndex:(unsigned long)index;
+- (long) ja_integerAtIndex:(unsigned long)index;
+- (unsigned long) ja_unsignedIntegerAtIndex:(unsigned long)index;
+- (BOOL) ja_boolAtIndex:(unsigned long)index;
 
 // Specific integer types; default 0
-- (char) charAtIndex:(unsigned long)index;
-- (short) shortAtIndex:(unsigned long)index;
-- (int) intAtIndex:(unsigned long)index;
-- (long) longAtIndex:(unsigned long)index;
-- (long long) longLongAtIndex:(unsigned long)index;
+- (char) ja_charAtIndex:(unsigned long)index;
+- (short) ja_shortAtIndex:(unsigned long)index;
+- (int) ja_intAtIndex:(unsigned long)index;
+- (long) ja_longAtIndex:(unsigned long)index;
+- (long long) ja_longLongAtIndex:(unsigned long)index;
 
-- (unsigned char) unsignedCharAtIndex:(unsigned long)index;
-- (unsigned short) unsignedShortAtIndex:(unsigned long)index;
-- (unsigned int) unsignedIntAtIndex:(unsigned long)index;
-- (unsigned long) unsignedLongAtIndex:(unsigned long)index;
-- (unsigned long long) unsignedLongLongAtIndex:(unsigned long)index;
+- (unsigned char) ja_unsignedCharAtIndex:(unsigned long)index;
+- (unsigned short) ja_unsignedShortAtIndex:(unsigned long)index;
+- (unsigned int) ja_unsignedIntAtIndex:(unsigned long)index;
+- (unsigned long) ja_unsignedLongAtIndex:(unsigned long)index;
+- (unsigned long long) ja_unsignedLongLongAtIndex:(unsigned long)index;
 
 // Floats; default: 0.0
-- (float) floatAtIndex:(unsigned long)index;
-- (double) doubleAtIndex:(unsigned long)index;
-- (float) nonNegativeFloatAtIndex:(unsigned long)index;
-- (double) nonNegativeDoubleAtIndex:(unsigned long)index;
+- (float) ja_floatAtIndex:(unsigned long)index;
+- (double) ja_doubleAtIndex:(unsigned long)index;
+- (float) ja_nonNegativeFloatAtIndex:(unsigned long)index;
+- (double) ja_nonNegativeDoubleAtIndex:(unsigned long)index;
 
 // Objects; default: nil
 // - (id) objectAtIndex:(unsigned long)index;	// Defined in framework
-- (id) objectAtIndexNoThrow:(unsigned long)index;
-- (id) objectOfClass:(Class)aClass atIndex:(unsigned long)index;
-- (NSString *) stringAtIndex:(unsigned long)index;
-- (NSArray *) arrayAtIndex:(unsigned long)index;
-- (NSSet *) setAtIndex:(unsigned long)index;
-- (NSDictionary *) dictionaryAtIndex:(unsigned long)index;
-- (NSData *) dataAtIndex:(unsigned long)index;
+- (id) ja_objectAtIndexNoThrow:(unsigned long)index;
+- (id) ja_objectOfClass:(Class)aClass atIndex:(unsigned long)index;
+- (NSString *) ja_stringAtIndex:(unsigned long)index;
+- (NSArray *) ja_arrayAtIndex:(unsigned long)index;
+- (NSSet *) ja_setAtIndex:(unsigned long)index;
+- (NSDictionary *) ja_dictionaryAtIndex:(unsigned long)index;
+- (NSData *) ja_dataAtIndex:(unsigned long)index;
 
 
 // Basic integer and boolean accessors
-- (long) integerAtIndex:(unsigned long)index defaultValue:(long)value;
-- (unsigned long) unsignedIntegerAtIndex:(unsigned long)index defaultValue:(unsigned long)value;
-- (BOOL) boolAtIndex:(unsigned long)index defaultValue:(BOOL)value;
+- (long) ja_integerAtIndex:(unsigned long)index defaultValue:(long)value;
+- (unsigned long) ja_unsignedIntegerAtIndex:(unsigned long)index defaultValue:(unsigned long)value;
+- (BOOL) ja_boolAtIndex:(unsigned long)index defaultValue:(BOOL)value;
 
 // Specific integer types
-- (char) charAtIndex:(unsigned long)index defaultValue:(char)value;
-- (short) shortAtIndex:(unsigned long)index defaultValue:(short)value;
-- (int) intAtIndex:(unsigned long)index defaultValue:(int)value;
-- (long) longAtIndex:(unsigned long)index defaultValue:(long)value;
-- (long long) longLongAtIndex:(unsigned long)index defaultValue:(long long)value;
+- (char) ja_charAtIndex:(unsigned long)index defaultValue:(char)value;
+- (short) ja_shortAtIndex:(unsigned long)index defaultValue:(short)value;
+- (int) ja_intAtIndex:(unsigned long)index defaultValue:(int)value;
+- (long) ja_longAtIndex:(unsigned long)index defaultValue:(long)value;
+- (long long) ja_longLongAtIndex:(unsigned long)index defaultValue:(long long)value;
 
-- (unsigned char) unsignedCharAtIndex:(unsigned long)index defaultValue:(unsigned char)value;
-- (unsigned short) unsignedShortAtIndex:(unsigned long)index defaultValue:(unsigned short)value;
-- (unsigned int) unsignedIntAtIndex:(unsigned long)index defaultValue:(unsigned int)value;
-- (unsigned long) unsignedLongAtIndex:(unsigned long)index defaultValue:(unsigned long)value;
-- (unsigned long long) unsignedLongLongAtIndex:(unsigned long)index defaultValue:(unsigned long long)value;
+- (unsigned char) ja_unsignedCharAtIndex:(unsigned long)index defaultValue:(unsigned char)value;
+- (unsigned short) ja_unsignedShortAtIndex:(unsigned long)index defaultValue:(unsigned short)value;
+- (unsigned int) ja_unsignedIntAtIndex:(unsigned long)index defaultValue:(unsigned int)value;
+- (unsigned long) ja_unsignedLongAtIndex:(unsigned long)index defaultValue:(unsigned long)value;
+- (unsigned long long) ja_unsignedLongLongAtIndex:(unsigned long)index defaultValue:(unsigned long long)value;
 
 // Floats
-- (float) floatAtIndex:(unsigned long)index defaultValue:(float)value;
-- (double) doubleAtIndex:(unsigned long)index defaultValue:(double)value;
-- (float) nonNegativeFloatAtIndex:(unsigned long)index defaultValue:(float)value;
-- (double) nonNegativeDoubleAtIndex:(unsigned long)index defaultValue:(double)value;
+- (float) ja_floatAtIndex:(unsigned long)index defaultValue:(float)value;
+- (double) ja_doubleAtIndex:(unsigned long)index defaultValue:(double)value;
+- (float) ja_nonNegativeFloatAtIndex:(unsigned long)index defaultValue:(float)value;
+- (double) ja_nonNegativeDoubleAtIndex:(unsigned long)index defaultValue:(double)value;
 
 // Objects
-- (id) objectAtIndex:(unsigned long)index defaultValue:(id)value;
-- (id) objectAtIndexNoThrow:(unsigned long)index defaultValue:(id)value;
-- (id) objectOfClass:(Class)aClass atIndex:(unsigned long)index defaultValue:(id)value;
-- (NSString *) stringAtIndex:(unsigned long)index defaultValue:(NSString *)value;
-- (NSArray *) arrayAtIndex:(unsigned long)index defaultValue:(NSArray *)value;
-- (NSSet *) setAtIndex:(unsigned long)index defaultValue:(NSSet *)value;
-- (NSDictionary *) dictionaryAtIndex:(unsigned long)index defaultValue:(NSDictionary *)value;
-- (NSData *) dataAtIndex:(unsigned long)index defaultValue:(NSData *)value;
+- (id) ja_objectAtIndex:(unsigned long)index defaultValue:(id)value;
+- (id) ja_objectAtIndexNoThrow:(unsigned long)index defaultValue:(id)value;
+- (id) ja_objectOfClass:(Class)aClass atIndex:(unsigned long)index defaultValue:(id)value;
+- (NSString *) ja_stringAtIndex:(unsigned long)index defaultValue:(NSString *)value;
+- (NSArray *) ja_arrayAtIndex:(unsigned long)index defaultValue:(NSArray *)value;
+- (NSSet *) ja_setAtIndex:(unsigned long)index defaultValue:(NSSet *)value;
+- (NSDictionary *) ja_dictionaryAtIndex:(unsigned long)index defaultValue:(NSDictionary *)value;
+- (NSData *) ja_dataAtIndex:(unsigned long)index defaultValue:(NSData *)value;
 
 @end
 
@@ -152,71 +156,71 @@ SOFTWARE.
 @interface NSDictionary (JAPropertyListAccessors)
 
 // Basic integer and boolean accessors; default 0/NO
-- (long) integerForKey:(id)key;
-- (unsigned long) unsignedIntegerForKey:(id)key;
-- (BOOL) boolForKey:(id)key;
+- (long) ja_integerForKey:(id)key;
+- (unsigned long) ja_unsignedIntegerForKey:(id)key;
+- (BOOL) ja_boolForKey:(id)key;
 
 // Specific integer types; default 0
-- (char) charForKey:(id)key;
-- (short) shortForKey:(id)key;
-- (int) intForKey:(id)key;
-- (long) longForKey:(id)key;
-- (long long) longLongForKey:(id)key;
+- (char) ja_charForKey:(id)key;
+- (short) ja_shortForKey:(id)key;
+- (int) ja_intForKey:(id)key;
+- (long) ja_longForKey:(id)key;
+- (long long) ja_longLongForKey:(id)key;
 
-- (unsigned char) unsignedCharForKey:(id)key;
-- (unsigned short) unsignedShortForKey:(id)key;
-- (unsigned int) unsignedIntForKey:(id)key;
-- (unsigned long) unsignedLongForKey:(id)key;
-- (unsigned long long) unsignedLongLongForKey:(id)key;
+- (unsigned char) ja_unsignedCharForKey:(id)key;
+- (unsigned short) ja_unsignedShortForKey:(id)key;
+- (unsigned int) ja_unsignedIntForKey:(id)key;
+- (unsigned long) ja_unsignedLongForKey:(id)key;
+- (unsigned long long) ja_unsignedLongLongForKey:(id)key;
 
 // Floats; default: 0.0
-- (float) floatForKey:(id)key;
-- (double) doubleForKey:(id)key;
-- (float) nonNegativeFloatForKey:(id)key;
-- (double) nonNegativeDoubleForKey:(id)key;
+- (float) ja_floatForKey:(id)key;
+- (double) ja_doubleForKey:(id)key;
+- (float) ja_nonNegativeFloatForKey:(id)key;
+- (double) ja_nonNegativeDoubleForKey:(id)key;
 
 // Objects; default: nil
 // - (id) objectForKey:(id)key;			// Defined in framework
-- (id) objectOfClass:(Class)aClass forKey:(id)key;
-- (NSString *) stringForKey:(id)key;
-- (NSArray *) arrayForKey:(id)key;
-- (NSSet *) setForKey:(id)key;
-- (NSDictionary *) dictionaryForKey:(id)key;
-- (NSData *) dataForKey:(id)key;
+- (id) ja_objectOfClass:(Class)aClass forKey:(id)key;
+- (NSString *) ja_stringForKey:(id)key;
+- (NSArray *) ja_arrayForKey:(id)key;
+- (NSSet *) ja_setForKey:(id)key;
+- (NSDictionary *) ja_dictionaryForKey:(id)key;
+- (NSData *) ja_dataForKey:(id)key;
 
 
 // Basic integer and boolean accessors
-- (long) integerForKey:(id)key defaultValue:(long)value;
-- (unsigned long) unsignedIntegerForKey:(id)key defaultValue:(unsigned long)value;
-- (BOOL) boolForKey:(id)key defaultValue:(BOOL)value;
+- (long) ja_integerForKey:(id)key defaultValue:(long)value;
+- (unsigned long) ja_unsignedIntegerForKey:(id)key defaultValue:(unsigned long)value;
+- (BOOL) ja_boolForKey:(id)key defaultValue:(BOOL)value;
 
 // Specific integer types
-- (char) charForKey:(id)key defaultValue:(char)value;
-- (short) shortForKey:(id)key defaultValue:(short)value;
-- (int) intForKey:(id)key defaultValue:(int)value;
-- (long) longForKey:(id)key defaultValue:(long)value;
-- (long long) longLongForKey:(id)key defaultValue:(long long)value;
+- (char) ja_charForKey:(id)key defaultValue:(char)value;
+- (short) ja_shortForKey:(id)key defaultValue:(short)value;
+- (int) ja_intForKey:(id)key defaultValue:(int)value;
+- (long) ja_longForKey:(id)key defaultValue:(long)value;
+- (long long) ja_longLongForKey:(id)key defaultValue:(long long)value;
 
-- (unsigned char) unsignedCharForKey:(id)key defaultValue:(unsigned char)value;
-- (unsigned short) unsignedShortForKey:(id)key defaultValue:(unsigned short)value;
-- (unsigned int) unsignedIntForKey:(id)key defaultValue:(unsigned int)value;
-- (unsigned long) unsignedLongForKey:(id)key defaultValue:(unsigned long)value;
-- (unsigned long long) unsignedLongLongForKey:(id)key defaultValue:(unsigned long long)value;
+- (unsigned char) ja_unsignedCharForKey:(id)key defaultValue:(unsigned char)value;
+- (unsigned short) ja_unsignedShortForKey:(id)key defaultValue:(unsigned short)value;
+- (unsigned int) ja_unsignedIntForKey:(id)key defaultValue:(unsigned int)value;
+- (unsigned long) ja_unsignedLongForKey:(id)key defaultValue:(unsigned long)value;
+- (unsigned long long) ja_unsignedLongLongForKey:(id)key defaultValue:(unsigned long long)value;
 
 // Floats
-- (float) floatForKey:(id)key defaultValue:(float)value;
-- (double) doubleForKey:(id)key defaultValue:(double)value;
-- (float) nonNegativeFloatForKey:(id)key defaultValue:(float)value;
-- (double) nonNegativeDoubleForKey:(id)key defaultValue:(double)value;
+- (float) ja_floatForKey:(id)key defaultValue:(float)value;
+- (double) ja_doubleForKey:(id)key defaultValue:(double)value;
+- (float) ja_nonNegativeFloatForKey:(id)key defaultValue:(float)value;
+- (double) ja_nonNegativeDoubleForKey:(id)key defaultValue:(double)value;
 
 // Objects
-- (id) objectForKey:(id)key defaultValue:(id)value;
-- (id) objectOfClass:(Class)aClass forKey:(id)key defaultValue:(id)value;
-- (NSString *) stringForKey:(id)key defaultValue:(NSString *)value;
-- (NSArray *) arrayForKey:(id)key defaultValue:(NSArray *)value;
-- (NSSet *) setForKey:(id)key defaultValue:(NSSet *)value;
-- (NSDictionary *) dictionaryForKey:(id)key defaultValue:(NSDictionary *)value;
-- (NSData *) dataForKey:(id)key defaultValue:(NSData *)value;
+- (id) ja_objectForKey:(id)key defaultValue:(id)value;
+- (id) ja_objectOfClass:(Class)aClass forKey:(id)key defaultValue:(id)value;
+- (NSString *) ja_stringForKey:(id)key defaultValue:(NSString *)value;
+- (NSArray *) ja_arrayForKey:(id)key defaultValue:(NSArray *)value;
+- (NSSet *) ja_setForKey:(id)key defaultValue:(NSSet *)value;
+- (NSDictionary *) ja_dictionaryForKey:(id)key defaultValue:(NSDictionary *)value;
+- (NSData *) ja_dataForKey:(id)key defaultValue:(NSData *)value;
 
 @end
 
@@ -225,80 +229,82 @@ SOFTWARE.
 @interface NSUserDefaults (JAPropertyListAccessors)
 
 // Basic integer and boolean accessors; default 0/NO
-// - (long) integerForKey:(id)key;		// Defined in framework (Leopard and later)
-- (unsigned long) unsignedIntegerForKey:(id)key;
-// - (BOOL) boolForKey:(id)key;			// Defined in framework
+// - (long) integerForKey:(NSString *)key;		// Defined in framework (Leopard and later)
+- (long) ja_integerForKey:(NSString *)key;
+- (unsigned long) ja_unsignedIntegerForKey:(NSString *)key;
+// - (BOOL) boolForKey:(NSString *)key;			// Defined in framework
+- (BOOL) ja_boolForKey:(NSString *)key;			// Laxer interpretation of "boolean" (see JABooleanForObject() below)
 
 // Specific integer types; default 0
-- (char) charForKey:(id)key;
-- (short) shortForKey:(id)key;
-- (int) intForKey:(id)key;
-- (long) longForKey:(id)key;
-- (long long) longLongForKey:(id)key;
+- (char) ja_charForKey:(NSString *)key;
+- (short) ja_shortForKey:(NSString *)key;
+- (int) ja_intForKey:(NSString *)key;
+- (long) ja_longForKey:(NSString *)key;
+- (long long) ja_longLongForKey:(NSString *)key;
 
-- (unsigned char) unsignedCharForKey:(id)key;
-- (unsigned short) unsignedShortForKey:(id)key;
-- (unsigned int) unsignedIntForKey:(id)key;
-- (unsigned long) unsignedLongForKey:(id)key;
-- (unsigned long long) unsignedLongLongForKey:(id)key;
+- (unsigned char) ja_unsignedCharForKey:(NSString *)key;
+- (unsigned short) ja_unsignedShortForKey:(NSString *)key;
+- (unsigned int) ja_unsignedIntForKey:(NSString *)key;
+- (unsigned long) ja_unsignedLongForKey:(NSString *)key;
+- (unsigned long long) ja_unsignedLongLongForKey:(NSString *)key;
 
 // Floats; default: 0.0
-// - (float) floatForKey:(id)key;		// Defined in framework
-//- (double) doubleForKey:(id)key;		// Defined in framework
-- (float) nonNegativeFloatForKey:(id)key;
-- (double) nonNegativeDoubleForKey:(id)key;
+// - (float) floatForKey:(NSString *)key;		// Defined in framework
+//- (double) doubleForKey:(NSString *)key;		// Defined in framework
+- (float) ja_nonNegativeFloatForKey:(NSString *)key;
+- (double) ja_nonNegativeDoubleForKey:(NSString *)key;
 
 // Objects; default: nil
-// - (id) objectForKey:(id)key;			// Defined in framework
-- (id) objectOfClass:(Class)aClass forKey:(id)key;
-// - (NSString *) stringForKey:(id)key;	// Defined in framework
-// - (NSArray *) arrayForKey:(id)key;	// Defined in framework
-- (NSSet *) setForKey:(id)key;
-// - (NSDictionary *) dictionaryForKey:(id)key;	// Defined in framework
-// - (NSData *) dataForKey:(id)key;		// Defined in framework
+// - (id) objectForKey:(NSString *)key;			// Defined in framework
+- (id) ja_objectOfClass:(Class)aClass forKey:(NSString *)key;
+// - (NSString *) stringForKey:(NSString *)key;	// Defined in framework
+// - (NSArray *) arrayForKey:(NSString *)key;	// Defined in framework
+- (NSSet *) ja_setForKey:(NSString *)key;
+// - (NSDictionary *) dictionaryForKey:(NSString *)key;	// Defined in framework
+// - (NSData *) dataForKey:(NSString *)key;		// Defined in framework
 
 
 // Basic integer and boolean accessors
-- (long) integerForKey:(id)key defaultValue:(long)value;
-- (unsigned long) unsignedIntegerForKey:(id)key defaultValue:(unsigned long)value;
-- (BOOL) boolForKey:(id)key defaultValue:(BOOL)value;
+- (long) ja_integerForKey:(NSString *)key defaultValue:(long)value;
+- (unsigned long) ja_unsignedIntegerForKey:(NSString *)key defaultValue:(unsigned long)value;
+- (BOOL) ja_boolForKey:(NSString *)key defaultValue:(BOOL)value;
 
 // Specific integer types
-- (char) charForKey:(id)key defaultValue:(char)value;
-- (short) shortForKey:(id)key defaultValue:(short)value;
-- (int) intForKey:(id)key defaultValue:(int)value;
-- (long) longForKey:(id)key defaultValue:(long)value;
-- (long long) longLongForKey:(id)key defaultValue:(long long)value;
+- (char) ja_charForKey:(NSString *)key defaultValue:(char)value;
+- (short) ja_shortForKey:(NSString *)key defaultValue:(short)value;
+- (int) ja_intForKey:(NSString *)key defaultValue:(int)value;
+- (long) ja_longForKey:(NSString *)key defaultValue:(long)value;
+- (long long) ja_longLongForKey:(NSString *)key defaultValue:(long long)value;
 
-- (unsigned char) unsignedCharForKey:(id)key defaultValue:(unsigned char)value;
-- (unsigned short) unsignedShortForKey:(id)key defaultValue:(unsigned short)value;
-- (unsigned int) unsignedIntForKey:(id)key defaultValue:(unsigned int)value;
-- (unsigned long) unsignedLongForKey:(id)key defaultValue:(unsigned long)value;
-- (unsigned long long) unsignedLongLongForKey:(id)key defaultValue:(unsigned long long)value;
+- (unsigned char) ja_unsignedCharForKey:(NSString *)key defaultValue:(unsigned char)value;
+- (unsigned short) ja_unsignedShortForKey:(NSString *)key defaultValue:(unsigned short)value;
+- (unsigned int) ja_unsignedIntForKey:(NSString *)key defaultValue:(unsigned int)value;
+- (unsigned long) ja_unsignedLongForKey:(NSString *)key defaultValue:(unsigned long)value;
+- (unsigned long long) ja_unsignedLongLongForKey:(NSString *)key defaultValue:(unsigned long long)value;
 
 // Floats
-- (float) floatForKey:(id)key defaultValue:(float)value;
-- (double) doubleForKey:(id)key defaultValue:(double)value;
-- (float) nonNegativeFloatForKey:(id)key defaultValue:(float)value;
-- (double) nonNegativeDoubleForKey:(id)key defaultValue:(double)value;
+- (float) ja_floatForKey:(NSString *)key defaultValue:(float)value;
+- (double) ja_doubleForKey:(NSString *)key defaultValue:(double)value;
+- (float) ja_nonNegativeFloatForKey:(NSString *)key defaultValue:(float)value;
+- (double) ja_nonNegativeDoubleForKey:(NSString *)key defaultValue:(double)value;
 
 // Objects
-- (id) objectForKey:(id)key defaultValue:(id)value;
-- (id) objectOfClass:(Class)aClass forKey:(id)key defaultValue:(id)value;
-- (NSString *) stringForKey:(id)key defaultValue:(NSString *)value;
-- (NSArray *) arrayForKey:(id)key defaultValue:(NSArray *)value;
-- (NSSet *) setForKey:(id)key defaultValue:(NSSet *)value;
-- (NSDictionary *) dictionaryForKey:(id)key defaultValue:(NSDictionary *)value;
-- (NSData *) dataForKey:(id)key defaultValue:(NSData *)value;
+- (id) ja_objectForKey:(NSString *)key defaultValue:(id)value;
+- (id) ja_objectOfClass:(Class)aClass forKey:(NSString *)key defaultValue:(id)value;
+- (NSString *) ja_stringForKey:(NSString *)key defaultValue:(NSString *)value;
+- (NSArray *) ja_arrayForKey:(NSString *)key defaultValue:(NSArray *)value;
+- (NSSet *) ja_setForKey:(NSString *)key defaultValue:(NSSet *)value;
+- (NSDictionary *) ja_dictionaryForKey:(NSString *)key defaultValue:(NSDictionary *)value;
+- (NSData *) ja_dataForKey:(NSString *)key defaultValue:(NSData *)value;
 
 // Default: nil
-// - (id) objectForKey:(id)key;	// Already defined
-- (id) objectOfClass:(Class)aClass forKey:(id)key;
-// - (NSString *) stringForKey:(id)key;
-// - (NSArray *) arrayForKey:(id)key;
-- (NSSet *) setForKey:(id)key;
-// - (NSDictionary *) dictionaryForKey:(id)key;
-// - (NSData *) dataForKey:(id)key;
+// - (id) objectForKey:(NSString *)key;	// Defined in framework
+- (id) ja_objectOfClass:(Class)aClass forKey:(NSString *)key;
+// - (NSString *) stringForKey:(NSString *)key;	// Defined in framework
+// - (NSArray *) arrayForKey:(NSString *)key;	// Defined in framework
+- (NSSet *) ja_setForKey:(NSString *)key;
+// - (NSDictionary *) dictionaryForKey:(NSString *)key;	// Defined in framework
+// - (NSData *) dataForKey:(NSString *)key;	// Defined in framework
 
 @end
 
@@ -306,19 +312,19 @@ SOFTWARE.
 
 @interface NSMutableArray (JAPropertyListAccessors)
 
-- (void) addInteger:(long)value;
-- (void) addUnsignedInteger:(unsigned long)value;
-- (void) addBool:(BOOL)value;
-- (void) addLongLong:(long long)value;
-- (void) addUnsignedLongLong:(long long)value;
-- (void) addFloat:(double)value;
+- (void) ja_addInteger:(long)value;
+- (void) ja_addUnsignedInteger:(unsigned long)value;
+- (void) ja_addBool:(BOOL)value;
+- (void) ja_addLongLong:(long long)value;
+- (void) ja_addUnsignedLongLong:(long long)value;
+- (void) ja_addFloat:(double)value;
 
-- (void) insertInteger:(long)value atIndex:(unsigned long)index;
-- (void) insertUnsignedInteger:(unsigned long)value atIndex:(unsigned long)index;
-- (void) insertBool:(BOOL)value atIndex:(unsigned long)index;
-- (void) insertLongLong:(long long)value atIndex:(unsigned long)index;
-- (void) insertUnsignedLongLong:(unsigned long long)value atIndex:(unsigned long)index;
-- (void) insertFloat:(double)value atIndex:(unsigned long)index;
+- (void) ja_insertInteger:(long)value atIndex:(unsigned long)index;
+- (void) ja_insertUnsignedInteger:(unsigned long)value atIndex:(unsigned long)index;
+- (void) ja_insertBool:(BOOL)value atIndex:(unsigned long)index;
+- (void) ja_insertLongLong:(long long)value atIndex:(unsigned long)index;
+- (void) ja_insertUnsignedLongLong:(unsigned long long)value atIndex:(unsigned long)index;
+- (void) ja_insertFloat:(double)value atIndex:(unsigned long)index;
 
 @end
 
@@ -326,12 +332,12 @@ SOFTWARE.
 
 @interface NSMutableDictionary (JAPropertyListAccessors)
 
-- (void) setInteger:(long)value forKey:(id)key;
-- (void) setUnsignedInteger:(unsigned long)value forKey:(id)key;
-- (void) setBool:(BOOL)value forKey:(id)key;
-- (void) setLongLong:(long long)value forKey:(id)key;
-- (void) setUnsignedLongLong:(unsigned long long)value forKey:(id)key;
-- (void) setFloat:(double)value forKey:(id)key;
+- (void) ja_setInteger:(long)value forKey:(id)key;
+- (void) ja_setUnsignedInteger:(unsigned long)value forKey:(id)key;
+- (void) ja_setBool:(BOOL)value forKey:(id)key;
+- (void) ja_setLongLong:(long long)value forKey:(id)key;
+- (void) ja_setUnsignedLongLong:(unsigned long long)value forKey:(id)key;
+- (void) ja_setFloat:(double)value forKey:(id)key;
 
 @end
 
@@ -339,12 +345,12 @@ SOFTWARE.
 
 @interface NSMutableSet (JAPropertyListAccessors)
 
-- (void) addInteger:(long)value;
-- (void) addUnsignedInteger:(unsigned long)value;
-- (void) addBool:(BOOL)value;
-- (void) addLongLong:(long long)value;
-- (void) addUnsignedLongLong:(long long)value;
-- (void) addFloat:(double)value;
+- (void) ja_addInteger:(long)value;
+- (void) ja_addUnsignedInteger:(unsigned long)value;
+- (void) ja_addBool:(BOOL)value;
+- (void) ja_addLongLong:(long long)value;
+- (void) ja_addUnsignedLongLong:(long long)value;
+- (void) ja_addFloat:(double)value;
 
 @end
 
