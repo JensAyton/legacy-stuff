@@ -6,7 +6,7 @@ Version 1.1
 Convenience accessors for NSArray, NSDictionary and NSUserDefaults.
 In addition to being convenient, these perform type checking. Which is,
 y’know, good to have. Each method has a <type>AtIndex: or <type>ForKey: variant
-and a <type>AtIndex:defaultValue:/<typ>ForKey:defaultValue: variant. The
+and a <type>AtIndex:defaultValue:/<type>ForKey:defaultValue: variant. The
 default value for the simpler variants is always 0, NO or nil.
 
 Note on types: ideally, stdint.h types would be used for integers. However,
