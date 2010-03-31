@@ -78,7 +78,7 @@ int main(int argc, const char * argv[])
 	*/
 	cc = 'a';
 	vkc = KEY_FROM_QWERTY(++cc);
-	Print(@"Hopefully 11: %u\n\n", vkc);
+	Print(@"Hopefully %u: %u\n\n", KEY_FROM_QWERTY('b'), vkc);
 	
 	for (i = 0; i != count; i++)
 	{

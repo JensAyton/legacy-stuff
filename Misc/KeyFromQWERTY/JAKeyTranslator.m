@@ -95,11 +95,6 @@ enum
 }
 
 
-- (void) finalize
-{
-}
-
-
 - (NSString *) description
 {
 	return [NSString stringWithFormat:@"<%@ %p>{\"%@\"}", self.className, self, self.layoutName];

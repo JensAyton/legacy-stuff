@@ -11,10 +11,8 @@
 	The distinction is needed because KEY_FROM_QWERTY('1') returns the VKC for
 	the 1 key on the main part of the keyboard.
 	
-	If passed a constant expression, the macros are themselves constant
-	expressions (assuming you’re using gcc or a future version of clang).
-	In optimized builds, known constant values that are not constant
-	expressions - such as local const variables - will also be folded.
+	If passed a constant-foldable expression, the macros are themselves
+	constant expressions (assuming you’re using gcc or clang).
 	
 	Additionally, the following macros provide information about the keyboard
 	layout used to generate the header:
@@ -54,10 +52,6 @@
 
 #ifndef KEY_FROM_QWERTY_USE_BUILTIN_CONSTANT_P
 #if defined(__GNUC__) || defined(__clang__)
-/*	A quick search suggests clang doesn't support __builtin_constant_p() yet,
-	but will at some point, probably before it's unleashed upon the general
-	public.
-*/
 #define KEY_FROM_QWERTY_USE_BUILTIN_CONSTANT_P	1
 #else
 #define KEY_FROM_QWERTY_USE_BUILTIN_CONSTANT_P	0
