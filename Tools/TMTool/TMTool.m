@@ -14,24 +14,29 @@ int main (int argc, const char * argv[])
 {
 	[[NSAutoreleasePool alloc] init];
 	
-	if (argc != 3)
+	if (argc < 3)
 	{
 		PrintUsageAndQuit();
 	}
 	
 	NSString *verb = [NSString stringWithUTF8String:argv[1]];
-	NSString *path = [NSString stringWithUTF8String:argv[2]];
 	
-	char buffer[PATH_MAX];
-	realpath([[path stringByExpandingTildeInPath] UTF8String], buffer);
-	path = [NSString stringWithUTF8String:buffer];
-	NSURL *url = [NSURL fileURLWithPath:path];
-	
-	if ([verb isEqualToString:@"status"])  PrintStatus(url);
-	else if ([verb isEqualToString:@"include"])  SetExcluded(url, NO, NO);
-	else if ([verb isEqualToString:@"exclude"])  SetExcluded(url, YES, NO);
-	else if ([verb isEqualToString:@"excludep"])  SetExcluded(url, YES, YES);
-	else  PrintUsageAndQuit();
+	unsigned i;
+	for (i = 2; i < argc; i++)
+	{
+		NSString *path = [NSString stringWithUTF8String:argv[i]];
+		
+		char buffer[PATH_MAX];
+		realpath([[path stringByExpandingTildeInPath] UTF8String], buffer);
+		path = [NSString stringWithUTF8String:buffer];
+		NSURL *url = [NSURL fileURLWithPath:path];
+		
+		if ([verb isEqualToString:@"status"])  PrintStatus(url);
+		else if ([verb isEqualToString:@"include"])  SetExcluded(url, NO, NO);
+		else if ([verb isEqualToString:@"exclude"])  SetExcluded(url, YES, NO);
+		else if ([verb isEqualToString:@"excludep"])  SetExcluded(url, YES, YES);
+		else  PrintUsageAndQuit();
+	}
 	
 	return 0;
 }
@@ -67,7 +72,7 @@ static void SetExcluded(NSURL *url, BOOL exclude, BOOL byPath)
 	OSStatus err = CSBackupSetItemExcluded((CFURLRef)url, exclude, byPath);
 	if (err != noErr)
 	{
-		fprintf(stderr, "Could not set item exclusion status (system error %i - %s).\n", err, 
+		fprintf(stderr, "Could not set item exclusion status (system error %li - %s).\n", (long)err, 
 		GetMacOSStatusErrorString(err));
 	}
 	else
