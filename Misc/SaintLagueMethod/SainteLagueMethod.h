@@ -2,7 +2,7 @@
 	SainteLagueMethod.h
 	Jens Ayton, 2009
 	
-	Calculate vote apportionment with the modified Sainte-Lagüe method
+	Calculate vote apportionment with the modified Sainte-Laguë method
 	(using an initial divisor of 1.4) and a threshold, as used in (among
 	others) Swedish elections. See
 	http://en.wikipedia.org/wiki/Sainte-Lagu%C3%AB_method or

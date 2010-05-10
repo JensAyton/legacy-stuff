@@ -2,7 +2,7 @@
 	SainteLagueMethod.h
 	Jens Ayton, 2009
 	
-	Calculate vote apportionment with the modified Sainte-Lagüe method
+	Calculate vote apportionment with the modified Sainte-Laguë method
 	(using an initial divisor of 1.4) and a threshold, as used in (among
 	others) Swedish elections. See
 	http://en.wikipedia.org/wiki/Sainte-Lagu%C3%AB_method or
@@ -67,6 +67,10 @@ static int CompareSLCalcInfo(const void *a, const void *b)
 	*/
 	uintmax_t			compA = infoA->votes * infoB->divisor;
 	uintmax_t			compB = infoB->votes * infoA->divisor;
+	
+	// Check for overflow.
+	assert(compA / infoB->divisor == infoA->votes);
+	assert(compB / infoA->divisor == infoB->votes);
 	
 	if (compA < compB)  return 1;
 	if (compA > compB)  return -1;
