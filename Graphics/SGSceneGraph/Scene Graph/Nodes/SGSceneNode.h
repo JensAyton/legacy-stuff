@@ -59,6 +59,7 @@
 
 // Transformation matrix
 @property (nonatomic) SGMatrix4x4 transform;
+@property (nonatomic, copy) NSValue *boxedTransform;
 - (void) setMatrixIdentity;
 
 // Parent and children
@@ -67,6 +68,7 @@
 @property (readonly, nonatomic) NSUInteger childCount;
 @property (retain, readonly, nonatomic) id firstChild;
 @property (retain, readonly, nonatomic) id nextSibling;
+
 - (SGSceneNode *) childAtIndex:(uint32_t)inIndex;	// O(n)
 - (NSEnumerator *) childEnumerator;
 - (id) addChild:(SGSceneNode *)inNode;	// Returns self, for simple chaining: root = [[SGSceneNode node] addChild:[[SGDisplayListCacheNode node] addChild:[SGAxisNode node]]]

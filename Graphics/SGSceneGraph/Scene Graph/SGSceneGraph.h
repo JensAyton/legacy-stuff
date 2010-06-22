@@ -73,3 +73,17 @@ extern NSString * const kSceneGraphStateKey;
 
 // Notification for scene changes.
 extern NSString *kSGSceneGraphModifiedNotification;
+
+
+// Boxing utilities to wrap SG geometry types in objects.
+@interface NSValue (SGSceneGraph)
+
++ (id) sg_valueWithVector2:(SGVector3)vector;
++ (id) sg_valueWithVector3:(SGVector3)vector;
++ (id) sg_valueWithMatrix4x4:(SGMatrix4x4)matrix;
+
+- (SGVector2) sg_vector2Value;
+- (SGVector3) sg_vector3Value;
+- (SGMatrix4x4) sg_matrix4x4Value;
+
+@end

@@ -149,7 +149,7 @@ NSString *kSGSceneGraphModifiedNotification = @"se.ayton.jens SGSceneGraph modif
 		}
 #endif
 		
-		[_root renderWithState:$dict(kSceneGraphStateKey, self)];
+		[_root renderWithState:$dict({kSceneGraphStateKey, self})];
 	}
 	@catch (id exception)
 	{
@@ -165,6 +165,57 @@ NSString *kSGSceneGraphModifiedNotification = @"se.ayton.jens SGSceneGraph modif
 		[releasePool drain];
 		if (saved != _context)  [saved makeCurrentContext];
 	}
+}
+
+@end
+
+
+@implementation NSValue (SGSceneGraph)
+
++ (id) sg_valueWithVector2:(SGVector3)vector
+{
+	return [self valueWithBytes:&vector objCType:@encode(SGScalar[2])];
+}
+
+
++ (id) sg_valueWithVector3:(SGVector3)vector
+{
+	return [self valueWithBytes:&vector objCType:@encode(SGScalar[3])];
+}
+
+
++ (id) sg_valueWithMatrix4x4:(SGMatrix4x4)matrix
+{
+	return [self valueWithBytes:&matrix objCType:@encode(SGScalar[16])];
+}
+
+- (SGVector2) sg_vector2Value
+{
+	NSAssert(strcmp([self objCType], @encode(SGScalar[2])) == 0, @"Boxed type mismatch.");
+	
+	SGVector2 result;
+	[self getValue:&result];
+	return result;
+}
+
+
+- (SGVector3) sg_vector3Value
+{
+	NSAssert(strcmp([self objCType], @encode(SGScalar[3])) == 0, @"Boxed type mismatch.");
+	
+	SGVector3 result;
+	[self getValue:&result];
+	return result;
+}
+
+
+- (SGMatrix4x4) sg_matrix4x4Value
+{
+	NSAssert(strcmp([self objCType], @encode(SGScalar[16])) == 0, @"Boxed type mismatch.");
+	
+	SGMatrix4x4 result;
+	[self getValue:&result];
+	return result;
 }
 
 @end

@@ -23,7 +23,7 @@
 	DEALINGS IN THE SOFTWARE.
 */
 
-#import "SGSceneNode.h"
+#import "SGSceneGraph.h"
 #import "SGSceneTag.h"
 #import "SGSimpleTag.h"
 
@@ -189,6 +189,8 @@ NSString *kSGSceneNodeModifiedNotification = @"se.ayton.jens SGSceneNode modifie
 {
 	SGSceneNode				*child;
 	
+	if (inChild == nil)  return;
+	
 #ifndef NDEBUG
 	++_mutationGuard;
 #endif
@@ -307,6 +309,24 @@ NSString *kSGSceneNodeModifiedNotification = @"se.ayton.jens SGSceneNode modifie
 }
 
 
+- (NSValue *) boxedTransform
+{
+	return [NSValue sg_valueWithMatrix4x4:_matrix];
+}
+
+
+- (void) setBoxedTransform:(NSValue *)value
+{
+	self.transform = [value sg_matrix4x4Value];
+}
+
+
++ (NSSet *) keyPathsForValuesAffectingBoxedTransform
+{
+	return [NSSet setWithObject:@"transform"];
+}
+
+
 - (NSUInteger) tagCount
 {
 	return _tags.count;
@@ -358,7 +378,7 @@ NSString *kSGSceneNodeModifiedNotification = @"se.ayton.jens SGSceneNode modifie
 
 - (void)removeTag:(SGSceneTag *)inTag
 {
-	unsigned			index;
+	NSUInteger			index;
 	if (self != [inTag owner]) return;
 	index = [_tags indexOfObject:inTag];
 	#ifndef NDEBUG
