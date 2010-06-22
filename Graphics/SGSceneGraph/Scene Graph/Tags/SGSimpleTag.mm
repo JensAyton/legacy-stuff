@@ -153,7 +153,7 @@
 }
 
 
-- (void)setIntegerValue:(int)inValue
+- (void)setIntegerValue:(NSInteger)inValue
 {
 	[self setValue:[NSNumber numberWithInteger:inValue]];
 }

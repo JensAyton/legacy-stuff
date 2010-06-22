@@ -227,7 +227,7 @@ static NSString *Description(id value)
 		}
 		else
 		{
-			NSLog(@"%s: invalid operation %i.", __FUNCTION__, inOperation);
+			NSLog(@"%s: invalid operation %i.", __FUNCTION__, (int)inOperation);
 		}
 	}
 }

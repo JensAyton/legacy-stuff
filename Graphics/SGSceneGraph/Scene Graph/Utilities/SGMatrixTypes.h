@@ -38,7 +38,6 @@ typedef struct
 		SGScalar				m[4][4];
 		SGScalar				vals[16];
 		#if SGVECTOR_VECTORIZE
-			vFloat				vec[4];
 			VectorFloat			blasVec[4][1];
 		#endif
 	};
@@ -50,11 +49,12 @@ SGVECTOR_INLINE SGMatrix4x4 SGMatrix4x4Construct(SGScalar AA, SGScalar AB, SGSca
 												 SGScalar CA, SGScalar CB, SGScalar CC, SGScalar CD,
 												 SGScalar DA, SGScalar DB, SGScalar DC, SGScalar DD)
 {
-	SGMatrix4x4 m = { AA, AB, AC, AD,
-					  BA, BB, BC, BD,
-					  CA, CB, CC, CD,
-					  DA, DB, DC, DD };
-	return m;			
+	SGMatrix4x4 r;
+	r.m[0][0] = AA; r.m[0][1] = AB; r.m[0][2] = AC; r.m[0][3] = AD;
+	r.m[1][0] = BA; r.m[1][1] = BB; r.m[1][2] = BC; r.m[1][3] = BD;
+	r.m[2][0] = CA; r.m[2][1] = CB; r.m[2][2] = CC; r.m[2][3] = CD;
+	r.m[3][0] = DA; r.m[3][1] = DB; r.m[3][2] = DC; r.m[3][3] = DD;
+	return r;
 }
 
 // Only for inline functions - meaning varies between C and C++
@@ -70,7 +70,6 @@ public:
 		SGScalar				m[4][4];
 		SGScalar				vals[16];
 #if SGVECTOR_VECTORIZE
-		vFloat					vec[4];
 		VectorFloat				blasVec[4][1];
 #endif
 	};
@@ -187,12 +186,12 @@ SGVECTOR_INLINE SGMatrix4x4 SGMatrix4x4UniformScaleMatrix(SGScalar factor) SGVEC
 
 SGVECTOR_EXTERN void SGMatrix4x4TransposeInPlace(SGMatrix4x4 *matrix) SGVECTOR_NONNULL;
 
-SGVECTOR_EXTERN bool SGMatrix4x4Equal(SGMatrix4x4 ma, SGMatrix4x4 mb) SGVECTOR_PURE SGVECTOR_NONNULL;
+SGVECTOR_EXTERN bool SGMatrix4x4Equal(SGMatrix4x4 ma, SGMatrix4x4 mb) SGVECTOR_PURE;
 
 #if SGVECTOR_VECTORIZE
-SGVECTOR_INLINE SGMatrix4x4 SGMatrix4x4Multiply(SGMatrix4x4 ma, SGMatrix4x4 mb) SGVECTOR_PURE SGVECTOR_NONNULL;
+SGVECTOR_INLINE SGMatrix4x4 SGMatrix4x4Multiply(SGMatrix4x4 ma, SGMatrix4x4 mb) SGVECTOR_PURE;
 #else
-SGVECTOR_EXTERN SGMatrix4x4 SGMatrix4x4Multiply(SGMatrix4x4 ma, SGMatrix4x4 mb) SGVECTOR_PURE SGVECTOR_NONNULL;
+SGVECTOR_EXTERN SGMatrix4x4 SGMatrix4x4Multiply(SGMatrix4x4 ma, SGMatrix4x4 mb) SGVECTOR_PURE;
 #endif
 SGVECTOR_INLINE void SGMatrix4x4MultiplyInPlace(SGMatrix4x4 *ma, SGMatrix4x4 mb) SGVECTOR_PURE SGVECTOR_NONNULL;
 

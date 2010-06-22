@@ -27,6 +27,7 @@
 #import "JASceneGraphView.h"
 #import "SGSceneGraphUtilities.h"
 #import "SGSceneGraph.h"
+#import <OpenGL/glu.h>
 
 NSString *kNotificationDDSceneViewSceneChanged = @"se.ayton.jens.SGSceneGraph kNotificationDDSceneViewSceneChanged";
 NSString *kNotificationDDSceneViewCameraChanged = @"se.ayton.jens.SGSceneGraph kNotificationDDSceneViewCameraChanged";
@@ -426,12 +427,16 @@ static const GLuint kFallbackAttributes[] =
 			where = [inEvent locationInWindow];
 			where = [self convertPoint:where fromView:nil];
 			newDragPoint = [self virtualTrackballLocationForPoint:where];
+			NSLog(@"newDragPoint: %@", newDragPoint.Description());
 			delta = newDragPoint - _dragPoint;
+			NSLog(@"delta: %@ (%g)", delta.Description(), delta.Magnitude());
 			if (0.00001f < delta.SquareMagnitude())
 			{
 				// Rotate about the axis that is perpendicular to the great circle connecting the mouse points.
 				axis = _dragPoint % newDragPoint;
-				_cameraRotation.RotateAroundAxis(axis, delta.Magnitude());
+				NSLog(@"axis: %@", axis.Description());
+				_cameraRotation.RotateAroundAxis(axis, delta.Magnitude() * 1000);
+				NSLog(@"matrix: %@", _cameraRotation.Description());
 				[self displaySettingsChanged];
 				_dragPoint = newDragPoint;
 			}

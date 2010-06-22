@@ -36,7 +36,6 @@
 	#define CGL_MACRO_DECLARE_VARIABLES() do {} while (0)
 #endif
 
-
 @implementation SGImageNode
 
 #pragma mark NSObject
@@ -110,7 +109,6 @@
 	
 	return self;
 }
-
 
 - (id)initWithTexture:(SGTexture2D *)inTexture
 {

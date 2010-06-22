@@ -27,7 +27,6 @@
 */
 
 #import "SGSceneNode.h"
-#import <OpenGL/gl.h>
 
 @class SGSimpleTexture2DMaterial, SGTexture2D;
 

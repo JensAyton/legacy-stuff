@@ -269,7 +269,7 @@ static unsigned GetMaxTextureSize(void);
 	if (mipMap) expectedDataSize = expectedDataSize * 4 / 3;
 	if (dataSize < expectedDataSize)
 	{
-		SGLog(@"SGTexture2D: expected %u bytes of data, got %u.", expectedDataSize, dataSize);
+		SGLog(@"SGTexture2D: expected %zu bytes of data, got %zu.", expectedDataSize, dataSize);
 		return;
 	}
 	
@@ -520,7 +520,7 @@ static unsigned GetMaxTextureSize(void);
 	* If this fails, fall back to -[NSImage size].
 	  In principle, this should give us {0, 0}.
 */
-- (NSSize)sizeInPixels;
+- (NSSize)sizeInPixels
 {
 	NSArray				*allReps = nil;
 	NSEnumerator		*repEnum = nil;

@@ -51,7 +51,7 @@
 
 @property (copy) NSString *name;
 
-@property Vector position;					// Default: 0, 0, 1
+@property SGVector3 position;				// Default: 0, 0, 1
 @property (getter = isEnabled) BOOL enabled;// Default: YES
 @property (getter = isPositional) BOOL positional;	// Default: NO (i.e. directional). This effectively sets position.w to either 0 or 1.
 

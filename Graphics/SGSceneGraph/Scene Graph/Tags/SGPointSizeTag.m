@@ -63,7 +63,7 @@
 - (void) apply:(NSMutableDictionary *)ioState
 {
 	glPushAttrib(GL_LINE_BIT);
-	glPointSize(fmaxf(_size, 0.0f));
+	glPointSize(fmaxf(self.size, 0.0f));
 }
 
 - (void)unapply

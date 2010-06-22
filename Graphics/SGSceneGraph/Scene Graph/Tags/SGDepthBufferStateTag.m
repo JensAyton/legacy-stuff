@@ -28,7 +28,7 @@
 
 static inline NSString *StateName(SGStateValue inState)
 {
-	static const NSString *names[3] = {@"off", @"on", @"no change"};
+	static NSString * const names[3] = {@"off", @"on", @"no change"};
 	return (inState <= kSGNoChange) ? names[inState] : @"unknown";
 }
 

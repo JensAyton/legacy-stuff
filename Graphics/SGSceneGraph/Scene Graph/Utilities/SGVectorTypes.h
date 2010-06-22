@@ -132,14 +132,19 @@ SGVECTOR_INLINE SGVector3 SGVector3Construct(SGScalar x, SGScalar y, SGScalar z)
 
 SGVECTOR_INLINE SGVector2 SGVector2Construct(SGScalar x, SGScalar y)
 {
-	SGVector2 r = {x, y};
+	SGVector2 r;
+	r.x = x;
+	r.y = y;
 	return r;
 }
 
 
 SGVECTOR_INLINE SGVector3 SGVector3Construct(SGScalar x, SGScalar y, SGScalar z)
 {
-	SGVector3 r = {x, y, z};
+	SGVector3 r;
+	r.x = x;
+	r.y = y;
+	r.z = z;
 	return r;
 }
 
@@ -329,7 +334,7 @@ SGVECTOR_INLINE SGVector3 SGVector3Construct(SGScalar x, SGScalar y, SGScalar z)
 	return SGVector3(x, y, z);
 }
 
-#endif	/* __cplusplus */extern const SGVector2 kSGVector2Zero;
+#endif	/* __cplusplus */
 
 
 extern const SGVector2 kSGVector2Zero;			// 0, 0

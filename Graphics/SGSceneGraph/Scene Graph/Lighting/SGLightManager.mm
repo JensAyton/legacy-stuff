@@ -28,7 +28,6 @@
 
 #if SCENGRAPH_LIGHTING
 
-
 #define DEBUG_DUMP	0
 
 
