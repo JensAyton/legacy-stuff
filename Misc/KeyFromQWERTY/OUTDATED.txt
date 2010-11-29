@@ -1,0 +1,3 @@
+KeyFromQWERTY has moved to github. This repository will not receive further updates.
+
+https://github.com/Ahruman/KeyNaming/tree/master/KeyFromQWERTY/
